@@ -1,0 +1,1558 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Digital Complaint System Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Kantumruy+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0f19;
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            padding: 60px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
+            border-radius: 16px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Inter', 'Kantumruy Pro', sans-serif;
+            height: 720px;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 55px 80px 40px 80px;
+            position: relative;
+            width: 1280px;
+            color: #f8fafc;
+        }
+
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .slide-container h1,
+        .slide-container h2,
+        .slide-container h3,
+        .slide-container h4 {
+            font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .slide-title-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .slide-title {
+            font-size: 34px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .slide-title::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 34px;
+            background: linear-gradient(to bottom, #38bdf8, #2563eb);
+            border-radius: 4px;
+        }
+
+        .slide-subtitle {
+            font-size: 13.5px;
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            padding-left: 21px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .two-column.tiled>div {
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 35px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s;
+        }
+
+        .two-column.tiled h3 {
+            color: #38bdf8;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .two-column.tiled p {
+            font-size: 15.5px;
+            color: #cbd5e1;
+            text-align: justify;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .horizontal-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+
+        .step-card {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 28px 22px;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-badge {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(37, 99, 235, 0.15) 100%);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .step-card h3 {
+            color: #ffffff;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .pillar-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .pillar-icon {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+            color: #38bdf8;
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin: 0 auto 22px auto;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        .pillar-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            font-size: 14.5px;
+            color: #94a3b8;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .checklist-wrapper {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            width: 100%;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .checklist-item i {
+            color: #10b981;
+            font-size: 22px;
+            margin-top: 4px;
+        }
+
+        .checklist-item.danger i {
+            color: #ef4444;
+        }
+
+        .checklist-text h3 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .checklist-text p {
+            color: #cbd5e1;
+            font-size: 14.5px;
+            margin: 0;
+        }
+
+        .table-layout {
+            width: 100%;
+            background-color: #0f172a;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-layout table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-layout th,
+        .table-layout td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 13.5px;
+        }
+
+        .table-layout th {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .table-layout tr:last-child td {
+            border-bottom: none;
+        }
+
+        .state-badge {
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .state-done {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .state-pending {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .state-processing {
+            background-color: rgba(37, 99, 235, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .alert-badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .alert-danger {
+            background-color: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        .alert-success {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .profile-container-modern {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            width: 100%;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .profile-card-modern {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            min-width: 200px;
+            flex: 1 1 0;
+            max-width: 280px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card-modern h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            min-height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .avatar-circle-modern {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            background: #0f172a;
+            border: 3px solid #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #38bdf8;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .avatar-circle-modern img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .role-badge-modern {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            font-size: 10px;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        .slide-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 18px;
+        }
+
+        .slide-footer span {
+            font-size: 12.5px;
+            color: #64748b;
+        }
+
+        .lang-switcher {
+            position: absolute;
+            top: 25px;
+            right: 80px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            color: #ffffff;
+        }
+
+        .lang-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #38bdf8;
+            box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Audio button style */
+        .audio-btn {
+            position: absolute;
+            top: 25px;
+            right: 180px;
+            z-index: 100;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .audio-btn:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            color: #ffffff;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .audio-btn.playing {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: rgba(239, 68, 68, 0.4);
+            color: #f87171;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+
+        .audio-btn i {
+            font-size: 14px;
+        }
+
+        /* Language visibility */
+        .lang-en {
+            display: none !important;
+        }
+
+        .lang-km {
+            display: block !important;
+        }
+
+        [data-lang="km"] {
+            display: block !important;
+        }
+
+        [data-lang="en"] {
+            display: none !important;
+        }
+
+        .slide-container.lang-en-mode [data-lang="km"] {
+            display: none !important;
+        }
+
+        .slide-container.lang-en-mode [data-lang="en"] {
+            display: block !important;
+        }
+
+        .slide-container.lang-en-mode .lang-km {
+            display: none !important;
+        }
+
+        .slide-container.lang-en-mode .lang-en {
+            display: block !important;
+        }
+
+        .slide-container.lang-km-mode [data-lang="km"] {
+            display: block !important;
+        }
+
+        .slide-container.lang-km-mode [data-lang="en"] {
+            display: none !important;
+        }
+
+        .slide-container.lang-km-mode .lang-km {
+            display: block !important;
+        }
+
+        .slide-container.lang-km-mode .lang-en {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TITLE -->
+    <div class="slide-container lang-km-mode" id="slide1">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide1')" id="audio-btn-1">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="content-area" style="align-items: center; text-align: center;">
+            <div style="margin-bottom: 15px;">
+                <h3 style="color: #38bdf8; font-size: 24px; letter-spacing: 1px; font-weight: 600; margin-bottom: 5px;">យ៉ាកជីន (ខេមបូឌា) អ៊ិន</h3>
+                <h2 style="font-family: 'Inter', sans-serif; font-size: 18px; color: #94a3b8; letter-spacing: 2px; font-weight: 500;">YAKJIN (CAMBODIA) INC.</h2>
+            </div>
+
+            <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #38bdf8, #2563eb); margin: 15px 0 30px 0;"></div>
+
+            <h1 style="font-size: 54px; color: #ffffff; margin-bottom: 15px; letter-spacing: -0.5px; max-width: 1000px; line-height: 1.3;">
+                <span data-lang="km">ប្រព័ន្ធប្រអប់មតិយោបល់ <br><span style="background: linear-gradient(to right, #38bdf8, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">និងបណ្តឹងតវ៉ាឌីជីថល (CSR)</span></span>
+                <span data-lang="en">Digital Suggestion Box <br><span style="background: linear-gradient(to right, #38bdf8, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&amp; Complaint System (CSR)</span></span>
+            </h1>
+            <p style="font-size: 19px; color: #94a3b8; max-width: 850px; margin: 0 0 40px 0;">
+                <span data-lang="km">យន្តការទទួលព័ត៌មានប្រកបដោយតម្លាភាព សុវត្ថិភាព និងរក្សាសម្ងាត់ខ្ពស់</span>
+                <span data-lang="en">A Transparent, Secure, and Highly Confidential Grievance Mechanism</span>
+            </p>
+
+            <div style="display: flex; gap: 15px; font-family: 'Inter', sans-serif; font-size: 15px; background: rgba(255,255,255,0.03); padding: 10px 25px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: #38bdf8; font-weight: 600;"><i class="fa-regular fa-calendar-days"></i> Launch Year: 2026</span>
+                <span style="color: #64748b;">|</span>
+                <span style="color: #94a3b8;">IT &amp; CSR Co-Operation System</span>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 1 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: PROJECT ORGANIZERS & COORDINATORS -->
+    <div class="slide-container lang-km-mode" id="slide2">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide2')" id="audio-btn-2">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ក្រុមការងាររៀបចំ និងសម្របសម្រួល</span>
+                <span data-lang="en">Project Organizers &amp; Coordinators</span>
+            </h2>
+            <span class="slide-subtitle">Project Creators and System Coordinators</span>
+        </div>
+
+        <div class="content-area">
+            <div class="profile-container-modern">
+                <div class="profile-card-modern">
+                    <div class="avatar-circle-modern">
+                        <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1753510998/iim7nnbttuupatglhot0.jpg" alt="Lim Hengleab">
+                    </div>
+                    <div class="role-badge-modern">System Developer</div>
+                    <h3 data-lang="km">លោក លីម ហេងលៀប</h3>
+                    <h3 data-lang="en">Mr. Lim Hengleab</h3>
+                    <p style="font-size: 18px; color: #38bdf8; margin: 0;">
+                        <span data-lang="km">ការិយាល័យផ្នែក IT</span>
+                        <span data-lang="en">IT Department Office</span>
+                    </p>
+                </div>
+
+                <div class="profile-card-modern">
+                    <div class="avatar-circle-modern">
+                        <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783143691/jvhnv4x8ai8wnshtxezw.jpg" alt="Son Chamrouen">
+                    </div>
+                    <div class="role-badge-modern">System Coordinator</div>
+                    <h3 data-lang="km">លោក សុន ចំរើន</h3>
+                    <h3 data-lang="en">Mr. Son Chamrouen</h3>
+                    <p style="font-size: 18px; color: #38bdf8; margin: 0;">
+                        <span data-lang="km">ជំនួយការ CSR</span>
+                        <span data-lang="en">CSR Assistant</span>
+                    </p>
+                </div>
+
+                <div class="profile-card-modern">
+                    <div class="avatar-circle-modern">
+                        <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783153906/rjtvp5jtmeihtmvjvxdc.jpg" alt="Bun Srey">
+                    </div>
+                    <div class="role-badge-modern">CSR Manager</div>
+                    <h3 data-lang="km">លោក ស្រី ប៊ុន</h3>
+                    <h3 data-lang="en">Mr. Bun Srey</h3>
+                    <p style="font-size: 18px; color: #38bdf8; margin: 0;">
+                        <span data-lang="km">ប្រធាន CSR</span>
+                        <span data-lang="en">CSR Manager</span>
+                    </p>
+                </div>
+
+                <div class="profile-card-modern">
+                    <div class="avatar-circle-modern">
+                        <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783147076/e5zpwst8iyfslddkhg0j.jpg" alt="KONG SOKUNTHEA">
+                    </div>
+                    <div class="role-badge-modern">HR Manager</div>
+                    <h3 data-lang="km">លោកស្រី គង់ សុគន្ធា</h3>
+                    <h3 data-lang="en">Ms. Kong Sokunthea</h3>
+                    <p style="font-size: 18px; color: #38bdf8; margin: 0;">
+                        <span data-lang="km">ប្រធានរដ្ឋបាល</span>
+                        <span data-lang="en">HR Manager</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 2 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: WHY DO WE NEED THIS ONLINE SYSTEM? -->
+    <div class="slide-container lang-km-mode" id="slide3">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide3')" id="audio-btn-3">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ហេតុអ្វីបានជាយើងត្រូវការប្រព័ន្ធអនឡាញនេះ?</span>
+                <span data-lang="en">Why Do We Need This Online System?</span>
+            </h2>
+            <span class="slide-subtitle">Purpose and Structural Value</span>
+            <p style="color: #94a3b8; font-size: 14px; margin-top: 10px; padding-left: 21px; line-height: 1.6;">
+                <span data-lang="km">ប្រព័ន្ធនេះត្រូវបានរចនាឡើងអោយសាមញ្ញ និងងាយស្រួលប្រើប្រាស់។ ក្រដាសកត់ចំណាំអាចបាត់បង់ ឬខូចខាត ឬក៏អាចដាក់ក្នុងប្រអប់បិទជិតអស់រយៈពេលជាច្រើនសប្តាហ៍ ទើបនរណាម្នាក់អាចបើកវាបាន។ អ្នកមិនចាំបាច់រង់ចាំរហូតដល់អ្នកនៅកន្លែងធ្វើការដើម្បីរាយការណ៍បញ្ហានោះទេ។ ជាមួយប្រព័ន្ធអនឡាញថ្មីនេះ អ្នកអាចស្កែន QR Code និងដាក់សំណើរបស់អ្នកដោយឯកជនតាមទូរស័ព្ទរបស់អ្នកផ្ទាល់—គ្រប់ពេលវេលា គ្រប់ទីកន្លែង។ គ្មាននរណាម្នាក់នឹងឃើញអ្នកដាក់ពាក្យបណ្តឹងឡើយ ហើយស្នាមដៃរបស់អ្នកក៏មិនអាចតាមដានបានដែរ។</span>
+                <span data-lang="en">It is designed to be simple and easy to use. Paper notes gets lost and damaged, or sits in a locked box for weeks until someone can open it. You don't need to wait until you are at work to report an issue. With the new online system, you can scan the QR code and submit your concern privately using your own phone—anytime, anywhere. No one will ever see you submitting a report, and your handwriting cannot be traced.</span>
+            </p>
+        </div>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3><i class="fa-solid fa-shield-halved"></i> <span data-lang="km">ធានាភាពសម្ងាត់ និងសុវត្ថិភាព ១០០%</span><span data-lang="en">100% Confidentiality &amp; Safety</span></h3>
+                    <p>
+                        <span data-lang="km">ជម្រុញឱ្យបងប្អូនបុគ្គលិក និងកម្មករនិយោជិតទាំងអស់ហ៊ានបញ្ចេញមតិស្ថាបនា ឬរាយការណ៍បញ្ហាពិតប្រាកដក្នុងរោងចក្រ ដោយមិនចាំបាច់ព្រួយបារម្ភពីផលប៉ះពាល់ដល់ការងារ តាមរយៈជម្រើស «មិនបញ្ចេញអត្តសញ្ញាណ» (Anonymous)​​ ពិតប្រាកដ។</span>
+                        <span data-lang="en">Encourages all staff and workers to voice constructive feedback or report factory issues without fear of retaliation, utilizing a genuinely "Anonymous" reporting feature.</span>
+                    </p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-circle-nodes"></i> <span data-lang="km">ប្រព័ន្ធចងក្រង និងតាមដានច្បាស់លាស់</span><span data-lang="en">Centralized Tracking System</span></h3>
+                    <p>
+                        <span data-lang="km">រាល់ព័ត៌មានដែលបានបំពេញនឹងរត់ចូលទៅក្នុងតារាងគ្រប់គ្រងកណ្តាល (Google Sheet) របស់ផ្នែក CSR ភ្លាមៗ ដោយមានការគណនាថ្ងៃផុតកំណត់ (Deadline Alert) និងការបញ្ជូនដំណឹងអូតូដើម្បីធានាថាគ្រប់បណ្តឹងទាំងអស់ត្រូវបានដោះស្រាយទាន់ពេលវេលា។</span>
+                        <span data-lang="en">All submitted data automatically flows into google's centralized database accessible only by HR/CSR. It features real-time Deadline Alerts and auto-notifications to ensure every grievance is resolved on time.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 3 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: SIMPLE STEPS FOR WORKERS TO USE -->
+    <div class="slide-container lang-km-mode" id="slide4">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide4')" id="audio-btn-4">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ជំហានងាយៗក្នុងការប្រើប្រាស់សម្រាប់កម្មករ</span>
+                <span data-lang="en">Simple Steps for Workers to Use</span>
+            </h2>
+            <span class="slide-subtitle">Simple Step-by-Step User Process</span>
+        </div>
+        <div class="content-area">
+            <div class="horizontal-steps">
+                <div class="step-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(37, 99, 235, 0.08) 100%);">
+                    <div class="step-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);"><span data-lang="km">ជំហានទី ១</span><span data-lang="en">Step 1</span></div>
+                    <h3 style="color: #38bdf8;"><i class="fa-solid fa-qrcode"></i> <span data-lang="km">ស្កែន QR Code</span><span data-lang="en">Scan QR Code</span></h3>
+                    <p>
+                        <span data-lang="km">ប្រើប្រាស់ទូរស័ព្ទដៃស្កែនលើរូបភាព QR Code ដែលមានបិទនៅលើក្តារព័ត៌មាន ឬទីតាំងរួមក្នុងរោងចក្រ។</span>
+                        <span data-lang="en">Scan the QR Code posted on the announcement boards or common areas using a smartphone.</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #10b981; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(16, 185, 129, 0.08) 100%);">
+                    <div class="step-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);"><span data-lang="km">ជំហានទី ២</span><span data-lang="en">Step 2</span></div>
+                    <h3 style="color: #34d399;"><i class="fa-solid fa-list"></i> <span data-lang="km">ជ្រើសរើសប្រភេទបណ្តឹង</span><span data-lang="en">Select Category</span></h3>
+                    <p>
+                        <span data-lang="km">ជ្រើសរើសប្រភេទដែលត្រូវនឹងបញ្ហារបស់បងប្អូន (ដូចជា ប្រាក់ឈ្នួល បរិយាកាសការងារ ឬម៉ាស៊ីន...)។</span>
+                        <span data-lang="en">Choose the category that matches your issue (e.g., rights, health &amp; safety, legal requirement, recommendation, other ...).</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #f59e0b; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(245, 158, 11, 0.08) 100%);">
+                    <div class="step-badge" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);"><span data-lang="km">ជំហានទី ៣</span><span data-lang="en">Step 3</span></div>
+                    <h3 style="color: #fbbf24;"><i class="fa-solid fa-user-secret"></i> <span data-lang="km">ជ្រើសរើសអត្តសញ្ញាណ</span><span data-lang="en">Choose Identity</span></h3>
+                    <p>
+                        <span data-lang="km">ជ្រើសរើស «រក្សាសម្ងាត់ (Anonymous)» ប្រសិនបើមិនចង់ដាក់ឈ្មោះ ឬ «បង្ហាញឈ្មោះ» ដើម្បីងាយស្រួលទាក់ទងត្រឡប់។</span>
+                        <span data-lang="en">Select "Anonymous" to hide your name or "Provide Name" for easy direct follow-ups.</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #a855f7; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(168, 85, 247, 0.08) 100%);">
+                    <div class="step-badge" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.3);"><span data-lang="km">ជំហានទី ៤</span><span data-lang="en">Step 4</span></div>
+                    <h3 style="color: #c084fc;"><i class="fa-solid fa-paper-plane"></i> <span data-lang="km">ចុចផ្ញើ (Submit)</span><span data-lang="en">Click Submit</span></h3>
+                    <p>
+                        <span data-lang="km">ពិនិត្យព័ត៌មានរួចរាល់ រួចចុចប៊ូតុងផ្ញើ។ ទិន្នន័យនឹងលោតចូលប្រព័ន្ធគ្រប់គ្រងភ្លាមៗដោយស្វ័យប្រវត្តិ។</span>
+                        <span data-lang="en">Review the details and submit. Data instantly synchronizes with the management panel.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 4 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: COMPLAINT & SUGGESTION CATEGORIES -->
+    <div class="slide-container lang-km-mode" id="slide5">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide5')" id="audio-btn-5">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ប្រភេទបណ្តឹង និងមតិយោបល់ក្នុងប្រព័ន្ធ</span>
+                <span data-lang="en">Complaint &amp; Suggestion Categories</span>
+            </h2>
+            <span class="slide-subtitle">Official Google Form Complaint Categories</span>
+        </div>
+        <div class="content-area">
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; width: 100%;">
+                
+                <div class="pillar-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(37, 99, 235, 0.08) 100%); padding: 20px 14px; text-align: left;">
+                    <div class="pillar-icon" style="color: #38bdf8; background: rgba(37, 99, 235, 0.15); border-color: rgba(56, 189, 248, 0.2); width: 50px; height: 50px; font-size: 20px; margin: 0 auto 14px auto;">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 style="color: #38bdf8; font-size: 15px; text-align: center; margin-bottom: 8px;">Rights &amp; Benefits</h3>
+                    <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        <span data-lang="km"><strong style="color: #38bdf8;">និយមន័យ៖</strong> សិទ្ធិគឺជាអ្វីដែលបានសន្យាជូនអ្នកដោយច្បាប់ ស្តង់ដារអនុលោមភាពរបស់ម៉ាក ឬគោលការណ៍របស់ក្រុមហ៊ុន។</span>
+                        <span data-lang="en"><strong style="color: #38bdf8;">Definition:</strong> A right is something already promised to you by law, brand compliance standards, or company policy.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border-color: #10b981; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(16, 185, 129, 0.08) 100%); padding: 20px 14px; text-align: left;">
+                    <div class="pillar-icon" style="color: #34d399; background: rgba(16, 185, 129, 0.15); border-color: rgba(52, 211, 153, 0.2); width: 50px; height: 50px; font-size: 20px; margin: 0 auto 14px auto;">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 style="color: #34d399; font-size: 15px; text-align: center; margin-bottom: 8px;">Health &amp; Safety</h3>
+                    <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        <span data-lang="km"><strong style="color: #34d399;">និយមន័យ៖</strong> សំដៅលើលក្ខខណ្ឌ ការអនុវត្ត និងបរិយាកាសរូបវន្តក្នុងរោងចក្រ ដែលប៉ះពាល់ដល់សុវត្ថិភាព សុខភាព និងសុខុមាលភាពរបស់អ្នកពេលកំពុងធ្វើការ។</span>
+                        <span data-lang="en"><strong style="color: #34d399;">Definition:</strong> Refers to the conditions, practices, and physical environment in the factory that affect your safety, health, and well-being while at work.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border-color: #f59e0b; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(245, 158, 11, 0.08) 100%); padding: 20px 14px; text-align: left;">
+                    <div class="pillar-icon" style="color: #fbbf24; background: rgba(245, 158, 11, 0.15); border-color: rgba(251, 191, 36, 0.2); width: 50px; height: 50px; font-size: 20px; margin: 0 auto 14px auto;">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 style="color: #fbbf24; font-size: 15px; text-align: center; margin-bottom: 8px;">Legal Requirements</h3>
+                    <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        <span data-lang="km"><strong style="color: #fbbf24;">និយមន័យ៖</strong> សំដៅលើច្បាប់ផ្លូវការ បទប្បញ្ញត្តិរោងចក្រ និងកិច្ចសន្យាការងារ ដែលក្រុមហ៊ុនត្រូវតែអនុវត្តតាមយ៉ាងតឹងរ៉ឹង ដើម្បីការពារកម្មករ។</span>
+                        <span data-lang="en"><strong style="color: #fbbf24;">Definition:</strong> Refer to the official laws, factory regulations, and employment contracts that the company must strictly follow to protect workers.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border-color: #a855f7; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(168, 85, 247, 0.08) 100%); padding: 20px 14px; text-align: left;">
+                    <div class="pillar-icon" style="color: #c084fc; background: rgba(168, 85, 247, 0.15); border-color: rgba(192, 132, 252, 0.2); width: 50px; height: 50px; font-size: 20px; margin: 0 auto 14px auto;">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 style="color: #c084fc; font-size: 15px; text-align: center; margin-bottom: 8px;">Recommendations</h3>
+                    <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        <span data-lang="km"><strong style="color: #c084fc;">និយមន័យ៖</strong> គឺជាគំនិត ការណែនាំ និងដំណោះស្រាយប្រកបដោយភាពច្នៃប្រឌិតរបស់អ្នក ដើម្បីកែលម្អកន្លែងធ្វើការ ប្រតិបត្តិការប្រចាំថ្ងៃ និងបរិយាកាសការងារ។</span>
+                        <span data-lang="en"><strong style="color: #c084fc;">Definition:</strong> Are your ideas, suggestions, and creative solutions to improve our workplace, daily operations, and workplace environment.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border-color: #ef4444; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(239, 68, 68, 0.08) 100%); padding: 20px 14px; text-align: left;">
+                    <div class="pillar-icon" style="color: #f87171; background: rgba(239, 68, 68, 0.15); border-color: rgba(248, 113, 113, 0.2); width: 50px; height: 50px; font-size: 20px; margin: 0 auto 14px auto;">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <h3 style="color: #f87171; font-size: 15px; text-align: center; margin-bottom: 8px;">Other</h3>
+                    <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        <span data-lang="km"><strong style="color: #f87171;">និយមន័យ៖</strong> គឺជាប្រភេទដែលអាចបត់បែនបាន និងមានសុវត្ថិភាព សម្រាប់កង្វល់ សំណួរ ឬបញ្ហាណាមួយដែលមិនស្ថិតក្នុងប្រភេទខាងលើ។</span>
+                        <span data-lang="en"><strong style="color: #f87171;">Definition:</strong> Is a flexible, secure category generally for any concern, question, or issue not covered in the categories above.</span>
+                    </p>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #38bdf8; font-size: 13px; margin-top: 18px; font-weight: 500;">
+                <span data-lang="km">* ជ្រើសរើសប្រភេទណាមួយដែលត្រូវនឹងបញ្ហារបស់អ្នក</span>
+                <span data-lang="en">* Select any category that matches your issue</span>
+            </p>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 5 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: CONFIDENTIALITY PROTECTIONS & BEST PRACTICES -->
+    <div class="slide-container lang-km-mode" id="slide6">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide6')" id="audio-btn-6">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ការធានាភាពសម្ងាត់ និងវិន័យនៃការរាយការណ៍</span>
+                <span data-lang="en">Confidentiality Protections &amp; Best Practices</span>
+            </h2>
+            <span class="slide-subtitle">Identity Protection and Reporting Best Practices</span>
+        </div>
+        <div class="content-area">
+            <div class="two-column">
+                <div class="checklist-wrapper">
+                    <h3 style="color: #38bdf8; font-size: 19px; margin-bottom: 5px;">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span data-lang="km">ការការពារអត្តសញ្ញាណបុគ្គលិក</span>
+                        <span data-lang="en">Employee Identity Protection</span>
+                    </h3>
+
+                    <div class="checklist-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">មិនទាមទារគណនី Gmail ឡើយ</h3>
+                            <h3 data-lang="en">No Google Sign-In Required</h3>
+                            <p>
+                                <span data-lang="km">ប្រព័ន្ធបើកចំហរទូទៅ មិនតម្រូវឱ្យកម្មករធ្វើការ Sign-in អ៊ីមែលចូលបំពេញឡើយ ធានាថាមិនអាចមានការស្វែងរកគណនីឃើញដាច់ខាត។</span>
+                                <span data-lang="en">The form is accessible publicly. Workers do not need to sign in, ensuring complete email anonymity.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">គ្មានការកត់ត្រាប្រវត្តិរូបសម្ងាត់</h3>
+                            <h3 data-lang="en">No Metadata Logging</h3>
+                            <p>
+                                <span data-lang="km">ទិន្នន័យបច្ចេកទេសទូរស័ព្ទដៃ ឬប្រព័ន្ធ GPS របស់បងប្អូន មិនត្រូវបានតាមដាន ឬរក្សាទុកក្នុងប្រព័ន្ធទិន្នន័យឡើយ។</span>
+                                <span data-lang="en">Device specs, phone models, and GPS locations are strictly never tracked or stored in the database.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-wrapper" style="border-color: rgba(239, 68, 68, 0.2); background: rgba(239, 68, 68, 0.03);">
+                    <h3 style="color: #f87171; font-size: 19px; margin-bottom: 5px;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span data-lang="km">អ្វីដែលបងប្អូនគួរជៀសវាង</span>
+                        <span data-lang="en">Things to Avoid</span>
+                    </h3>
+
+                    <div class="checklist-item danger">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">ការមួលបង្កាច់ ឬផ្តល់ព័ត៌មានមិនពិត</h3>
+                            <h3 data-lang="en">False Allegations &amp; Defamation</h3>
+                            <p>
+                                <span data-lang="km">សូមកុំប្រើប្រាស់ប្រព័ន្ធនេះដើម្បីសរសេរព័ត៌មានបំផ្លើសដែលគ្មានការពិត ឬធ្វើឱ្យប៉ះពាល់ដល់កិត្តិយសរបស់បុគ្គលដទៃដោយគ្មានភស្តុតាង។</span>
+                                <span data-lang="en">Please do not misuse the platform to spread groundless rumors or intentionally defame coworkers without proof.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="checklist-item danger">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">កាត់បន្ថយការប្រើពាក្យសម្តីអសុរោះ</h3>
+                            <h3 data-lang="en">Inappropriate or Profane Language</h3>
+                            <p>
+                                <span data-lang="km">សូមរក្សាការសរសេររាយការណ៍ក្នុងន័យស្ថាបនា ចំបញ្ហា និងប្រើប្រាស់ពាក្យពេចន៍សមរម្យ ដើម្បីងាយស្រួលដល់ក្រុមការងារដោះស្រាយ។</span>
+                                <span data-lang="en">Keep responses objective and constructive. Use polite language to help the team evaluate and resolve issues effectively.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 6 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: SYSTEM OPERATIONAL WORKFLOW -->
+    <div class="slide-container lang-km-mode" id="slide7">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide7')" id="audio-btn-7">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ដំណើរការនិងលំហូរការងាររបស់ប្រព័ន្ធ (System Flow)</span>
+                <span data-lang="en">System Operational Workflow</span>
+            </h2>
+            <span class="slide-subtitle">End-to-End Complaint Lifecycle and Backend Automation</span>
+        </div>
+        <div class="content-area">
+            <div class="horizontal-steps">
+                <div class="step-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(37, 99, 235, 0.08) 100%);">
+                    <div class="step-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);"><span data-lang="km">ជំហានទី ១</span><span data-lang="en">Step 1</span></div>
+                    <h3 style="color: #38bdf8;"><i class="fa-brands fa-wpforms"></i> <span data-lang="km">បំពេញទម្រង់ Form</span><span data-lang="en">Form Submission</span></h3>
+                    <p>
+                        <span data-lang="km">ចម្លើយរបស់កម្មកររត់ចូលទៅកាន់ Google Form Database ជាជម្រើសសម្ងាត់ ឬចំហរ។</span>
+                        <span data-lang="en">Worker submits the Google Form securely with either anonymous or public identity options.</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #a855f7; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(168, 85, 247, 0.08) 100%);">
+                    <div class="step-badge" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.3);"><span data-lang="km">ជំហានទី ២</span><span data-lang="en">Step 2</span></div>
+                    <h3 style="color: #c084fc;"><i class="fa-solid fa-table"></i> <span data-lang="km">លោតចូល Sheet</span><span data-lang="en">Sheet Sync</span></h3>
+                    <p>
+                        <span data-lang="km">ទិន្នន័យសមស្របនឹងត្រូវបញ្ចូលទៅក្នុង Sheet គ្រប់គ្រងអូតូ រួចប្រព័ន្ធចាប់ផ្ដើមគណនាថ្ងៃអូតូ។</span>
+                        <span data-lang="en">Data maps instantly into the centralized master sheet, initializing automation processes.</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #f59e0b; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(245, 158, 11, 0.08) 100%);">
+                    <div class="step-badge" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);"><span data-lang="km">ជំហានទី ៣</span><span data-lang="en">Step 3</span></div>
+                    <h3 style="color: #fbbf24;"><i class="fa-solid fa-envelope-open-text"></i> <span data-lang="km">ផ្ញើដំណឹង &amp; ចាត់ការ</span><span data-lang="en">Alert &amp; Action</span></h3>
+                    <p>
+                        <span data-lang="km">ប្រព័ន្ធផ្ញើអ៊ីមែលប្រាប់ក្រុមការងារ CSR។ បណ្តឹងនីមួយៗមានកំណត់ថ្ងៃច្បាស់លាស់ (Deadline Alert)។</span>
+                        <span data-lang="en">Email alerts ping the CSR team automatically. System logs operational deadlines for follow-up.</span>
+                    </p>
+                </div>
+
+                <div class="step-card" style="border-color: #10b981; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(16, 185, 129, 0.08) 100%);">
+                    <div class="step-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);"><span data-lang="km">ជំហានទី ៤</span><span data-lang="en">Step 4</span></div>
+                    <h3 style="color: #34d399;"><i class="fa-solid fa-square-poll-vertical"></i> <span data-lang="km">បិទបណ្តឹង (Done)</span><span data-lang="en">Case Resolved</span></h3>
+                    <p>
+                        <span data-lang="km">ក្រោយពេលពិនិត្យ និងដោះស្រាយរួចរាល់ ស្ថានភាពនឹងត្រូវប្ដូរជាពណ៌បៃតង «Done» ដើម្បីបញ្ចប់ការតាមដាន។</span>
+                        <span data-lang="en">Once reviewed and resolved, status updates to green "Done", successfully archiving the case.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 7 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: IDENTITY CHANNELS -->
+    <div class="slide-container lang-km-mode" id="slide8">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide8')" id="audio-btn-8">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">ជម្រើសអត្តសញ្ញាណ៖ «បង្ហាញឈ្មោះ» ឬ «រក្សាសម្ងាត់»</span>
+                <span data-lang="en">Identity Channels: "Provide Name" vs "Anonymous"</span>
+            </h2>
+            <span class="slide-subtitle">Identity Choices and Evaluation Workflow</span>
+        </div>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3><i class="fa-solid fa-user-secret" style="color: #94a3b8;"></i> <span data-lang="km">រក្សាសម្ងាត់ (Anonymous)</span><span data-lang="en">Anonymous Path</span></h3>
+                    <p>
+                        <span data-lang="km">ប្រព័ន្ធកត់ត្រាប្រភេទបណ្តឹង និងការពិពណ៌នាដោយលាក់ឈ្មោះទាំងស្រុង។ ក្រុមការងារ CSR ចុះអន្តរាគមន៍ និងកែលម្អជាទូទៅក្នុងរោងចក្រ ផ្អែកលើករណីជាក់ស្តែង ដោយមិនមានការទាក់ទងផ្ទាល់ខ្លួនឡើយ។</span>
+                        <span data-lang="en">The system stores only the issue description while scrubbing all identity markers. CSR conducts generalized plant investigations and corrective enhancements based on pure facts.</span>
+                    </p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-user-tag" style="color: #34d399;"></i> <span data-lang="km">បង្ហាញឈ្មោះ (Provide Name)</span><span data-lang="en">Named/Open Path</span></h3>
+                    <p>
+                        <span data-lang="km">សមស្របសម្រាប់ករណីផ្ទាល់ខ្លួនដែលទាមទារការជួបជុំដោះស្រាយ ឬផ្ទៀងផ្ទាត់។ ក្រោយពេលដោះស្រាយរួច បុគ្គលិកអាចធ្វើការវាយតម្លៃត្រឡប់ (Evaluation) លើគុណភាព និងល្បឿននៃការឆ្លើយតបរបស់ក្រុមការងារបាន។</span>
+                        <span data-lang="en">Ideal for complex personal inquiries requiring targeted resolutions or cross-checks. Post-resolution, the employee can evaluate the team's responsiveness and overall resolution quality.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 8 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 9: LIVE BACK-END ADMINISTRATION SHEET STRUCTURE -->
+    <div class="slide-container lang-km-mode" id="slide9">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide9')" id="audio-btn-9">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">រចនាសម្ព័ន្ធតារាងគ្រប់គ្រងជាក់ស្តែងរបស់ប្រព័ន្ធ</span>
+                <span data-lang="en">Live Back-End Administration Sheet Structure</span>
+            </h2>
+            <span class="slide-subtitle">Google Sheet Live Integration Layout &amp; Real-time Calculations</span>
+        </div>
+        <div class="content-area">
+            <p style="font-size: 13px; color: #38bdf8; margin-bottom: 12px; font-style: italic;">
+                <span data-lang="km">* ទម្រង់ពិតប្រាកដនៃតារាងទិន្នន័យ (Google Sheet) ដែលចងក្រងចេញពី Form responses សម្រាប់ CSR Team តាមដាន៖</span>
+                <span data-lang="en">* Actual architecture of the master Google Sheet processed from Form responses for CSR tracking:</span>
+            </p>
+            <div class="table-layout" style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="font-size: 12px; white-space: nowrap;">Timestamp</th>
+                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ប្រភេទបណ្តឹង</span><span data-lang="en">Complaint Type</span></th>
+                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ខ្លឹមសារ</span><span data-lang="en">Description</span></th>
+                            <th style="font-size: 12px; white-space: nowrap;">Identity Choice</th>
+                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ឈ្មោះ និង លេខកាត</span><span data-lang="en">Name &amp; ID</span></th>
+                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ស្ថានភាព</span><span data-lang="en">Status</span></th>
+                            <th style="font-size: 12px; white-space: nowrap;">Deadline Alert</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 12px;">10/05/2026</td>
+                            <td style="font-size: 12px;"><span data-lang="km">សិទ្ធិ និងអត្ថប្រយោជន៍</span><span data-lang="en">Rights &amp; Benefits</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">មិនបានទទួលប្រាក់ថែមម៉ោងត្រឹមត្រូវ</span><span data-lang="en">Did not receive correct overtime pay</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">បង្ហាញឈ្មោះ</span><span data-lang="en">Provide Name</span></td>
+                            <td style="font-size: 12px;">Sokha / 1001</td>
+                            <td><span class="state-badge state-processing" style="font-size: 11px;">Processing</span></td>
+                            <td><span class="alert-badge alert-danger" style="font-size: 11px;">55 Days Left</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 12px;">16/05/2026</td>
+                            <td style="font-size: 12px;"><span data-lang="km">សុខភាព និងសុវត្ថិភាព</span><span data-lang="en">Health &amp; Safety</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">កង្វះឧបករណ៍ការពារផ្ទាល់ខ្លួន (PPE)</span><span data-lang="en">Lack of personal protective equipment (PPE)</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">រក្សាសម្ងាត់</span><span data-lang="en">Anonymous</span></td>
+                            <td style="font-size: 12px;">-</td>
+                            <td><span class="state-badge state-pending" style="font-size: 11px;">Pending</span></td>
+                            <td><span class="alert-badge alert-danger" style="font-size: 11px;">49 Days Left</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 12px;">20/06/2026</td>
+                            <td style="font-size: 12px;"><span data-lang="km">ការអនុលោមតាមច្បាប់</span><span data-lang="en">Legal Requirements</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">កិច្ចសន្យាការងារមិនច្បាស់លាស់</span><span data-lang="en">Unclear employment contract</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">បង្ហាញឈ្មោះ</span><span data-lang="en">Provide Name</span></td>
+                            <td style="font-size: 12px;">Dara / 1025</td>
+                            <td><span class="state-badge state-processing" style="font-size: 11px;">Processing</span></td>
+                            <td><span class="alert-badge alert-danger" style="font-size: 11px;">35 Days Left</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 12px;">25/06/2026</td>
+                            <td style="font-size: 12px;"><span data-lang="km">ការណែនាំ ឬយោបល់កែលម្អ</span><span data-lang="en">Recommendations</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">ស្នើដំឡើងកង្ហារបន្ថែមក្នុងសិក្ខាសាលា</span><span data-lang="en">Suggest installing more fans in the workshop</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">បង្ហាញឈ្មោះ</span><span data-lang="en">Provide Name</span></td>
+                            <td style="font-size: 12px;">Rithy / 1040</td>
+                            <td><span class="state-badge state-done" style="font-size: 11px;">Done</span></td>
+                            <td><span class="alert-badge alert-success" style="font-size: 11px;"><span data-lang="km">រួចរាល់</span><span data-lang="en">Done</span></span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 12px;">30/06/2026</td>
+                            <td style="font-size: 12px;"><span data-lang="km">ផ្សេងៗ</span><span data-lang="en">Other</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">សួរអំពីនីតិវិធីសុំឈប់សម្រាកបន្ទាន់</span><span data-lang="en">Ask about emergency leave procedure</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">រក្សាសម្ងាត់</span><span data-lang="en">Anonymous</span></td>
+                            <td style="font-size: 12px;">-</td>
+                            <td><span class="state-badge state-pending" style="font-size: 11px;">Pending</span></td>
+                            <td><span class="alert-badge alert-danger" style="font-size: 11px;">28 Days Left</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 9 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 10: KEY STRATEGIC BENEFITS -->
+    <div class="slide-container lang-km-mode" id="slide_benefits" style="position: relative;">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide_benefits')" id="audio-btn-10">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div style="position: absolute; bottom: -50px; left: 20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">អត្ថប្រយោជន៍គន្លឹះនៃប្រព័ន្ធឌីជីថល</span>
+                <span data-lang="en">Key Strategic Benefits of the Digital Platform</span>
+            </h2>
+            <span class="slide-subtitle">Value-Added Benefits for Employees and Management</span>
+        </div>
+
+        <div class="content-area">
+            <div class="pillars-grid">
+                <div class="pillar-card" style="border: 1px solid rgba(245, 158, 11, 0.15); background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(245, 158, 11, 0.02) 100%);">
+                    <div class="pillar-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.25); box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 style="color: #fbbf24;"><span data-lang="km">លឿនរហ័ស និងស្វ័យប្រវត្តិ</span><span data-lang="en">Speed &amp; Automation</span></h3>
+                    <p>
+                        <span data-lang="km">មិនបាច់ចំណាយពេលសរសេរលើក្រដាស និងដើរទៅប្រអប់បណ្តឹង។ ទិន្នន័យរត់ភ្លាមៗ ជួយឱ្យការសម្រេចចិត្តដោះស្រាយធ្វើឡើងបានលឿនជាងមុន។</span>
+                        <span data-lang="en">Saves time by removing manual paperwork or walking to physical boxes. Live data piping ensures accelerated resolution turnarounds.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border: 1px solid rgba(16, 185, 129, 0.15); background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(16, 185, 129, 0.02) 100%);">
+                    <div class="pillar-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.25); box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 style="color: #34d399;"><span data-lang="km">ងាយស្រួលធ្វើរបាយការណ៍</span><span data-lang="en">Effortless Reporting</span></h3>
+                    <p>
+                        <span data-lang="km">ប្រព័ន្ធបម្លែងទិន្នន័យជាក្រាបតារាង (Pie Chart) អូតូ ងាយស្រួលដឹងថាក្នុងមួយខែៗមានបញ្ហាត្រង់ណាខ្លះកើតឡើងច្រើនជាងគេ ដើម្បីកែលម្អចំគោលដៅ។</span>
+                        <span data-lang="en">Converts monthly raw submissions into automated pie charts instantly, identifying high-frequency issues for targeted plant improvements.</span>
+                    </p>
+                </div>
+
+                <div class="pillar-card" style="border: 1px solid rgba(244, 63, 94, 0.15); background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(244, 63, 94, 0.02) 100%);">
+                    <div class="pillar-icon" style="color: #f43f5e; background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.25); box-shadow: 0 0 20px rgba(244, 63, 94, 0.15);">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 style="color: #fb7185;"><span data-lang="km">បង្កើនភាពជឿជាក់ផ្ទៃក្នុង</span><span data-lang="en">Internal Workplace Trust</span></h3>
+                    <p>
+                        <span data-lang="km">ការមានប្រព័ន្ធតាមដានថ្ងៃច្បាស់លាស់ ជួយធានាតម្លាភាព និងបង្កើនភាពកក់ក្តៅជូនដល់កម្មករនិយោជិតគ្រប់រូបនៅក្នុងរោងចក្រ។</span>
+                        <span data-lang="en">Operational deadline transparency actively builds strong workforce morale and reassures all factory personnel of fair treatment.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>CSR &amp; IT Operations System Presentation</span>
+            <span>Slide 10 of 11</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 11: FINAL / QR CODE -->
+    <div class="slide-container lang-km-mode" id="slide11">
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+        <button class="audio-btn" onclick="speakSlide('slide11')" id="audio-btn-11">
+            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        </button>
+
+        <div class="slide-title-wrapper" style="text-align: center; border-left: none; padding-left: 0;">
+            <h2 style="font-size: 38px; color: #ffffff;">
+                <span data-lang="km">មតិរបស់អ្នកគឺជាការកែលម្អរបស់យើង!</span>
+                <span data-lang="en">Your Voice Matters for Our Progress!</span>
+            </h2>
+            <span class="slide-subtitle" style="font-size: 15px; margin-top: 5px; padding-left: 0;">Your Feedback is Our Continuous Improvement</span>
+        </div>
+        <div class="content-area" style="margin-top: 20px;">
+            <div class="two-column" style="grid-template-columns: 300px 1fr; align-items: center;">
+                <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 16px; border: 2px dashed rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 310px; overflow: hidden;">
+                    <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783142845/ukbrfirklwjwxvvmiiau.png" alt="System QR Code" style="width: 220px; height: 220px; object-fit: contain; background-color: #ffffff; padding: 6px; border-radius: 8px; border: 3px solid #2563eb;">
+                    <span style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-top: 15px; letter-spacing: 0.5px;">
+                        <span data-lang="km">ស្កែនដើម្បីបញ្ចេញមតិ</span>
+                        <span data-lang="en">SCAN TO REPORT</span>
+                    </span>
+                </div>
+
+                <div class="checklist-wrapper">
+                    <h3 style="color: #38bdf8; font-size: 20px; font-weight: 600;">
+                        <span data-lang="km">រួមគ្នាកសាងបរិយាកាសការងារកាន់តែប្រសើរ៖</span>
+                        <span data-lang="en">Building a Better Working Environment Together:</span>
+                    </h3>
+
+                    <div class="checklist-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">ស្កែន QR Code ដើម្បីបើកទម្រង់ Form ភ្លាមៗ</h3>
+                            <h3 data-lang="en">Instant QR Code Access</h3>
+                            <p>
+                                <span data-lang="km">បងប្អូនអាចប្រើប្រាស់កាមេរ៉ាទូរស័ព្ទ ឬកម្មវិធីស្កែនផ្សេងៗដើម្បីបើកបំពេញទម្រង់អនឡាញបានគ្រប់ពេល។</span>
+                                <span data-lang="en">Workers can quickly utilize any standard phone camera to load and fill out the form at any moment.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="checklist-text">
+                            <h3 data-lang="km">ការរក្សាទុកទិន្នន័យប្រកបដោយសុវត្ថិភាពខ្ពស់</h3>
+                            <h3 data-lang="en">Secure and Hardened Data Storage</h3>
+                            <p>
+                                <span data-lang="km">ធានាភាពសម្ងាត់ជូនបងប្អូនកម្មករនិយោជិត និងរក្សាទុកក្នុងប្រព័ន្ធទិន្នន័យសុវត្ថិភាពរបស់រោងចក្រ។</span>
+                                <span data-lang="en">Guarantees strict end-user confidentiality, backed by protected enterprise factory data storage.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 11 of 11</span>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // 1. LANGUAGE SWITCH FUNCTION (រក្សាទុកដើម)
+        // ============================================================
+        function switchLang(lang) {
+            const containers = document.querySelectorAll('.slide-container');
+            containers.forEach(container => {
+                container.classList.remove('lang-km-mode', 'lang-en-mode');
+                if (lang === 'en') {
+                    container.classList.add('lang-en-mode');
+                } else {
+                    container.classList.add('lang-km-mode');
+                }
+            });
+
+            const allButtons = document.querySelectorAll('.lang-btn');
+            allButtons.forEach(btn => {
+                if (lang === 'en') {
+                    if (btn.classList.contains('en-btn')) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                } else {
+                    if (btn.classList.contains('km-btn')) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                }
+            });
+
+            // Stop any playing audio when language changes
+            if (currentSpeech) {
+                window.speechSynthesis.cancel();
+                currentSpeech = null;
+                isPlaying = false;
+                document.querySelectorAll('.audio-btn').forEach(btn => {
+                    btn.classList.remove('playing');
+                    const icon = btn.querySelector('i');
+                    if (icon) icon.className = 'fa-solid fa-volume-high';
+                    const span = btn.querySelector('span');
+                    if (span) {
+                        span.textContent = lang === 'km' ? 'ស្តាប់' : 'Listen';
+                    }
+                });
+            }
+        }
+
+        // ============================================================
+// 2. TEXT-TO-SPEECH FUNCTION (កែលម្អសម្រាប់ភាសាខ្មែរ)
+// ============================================================
+let currentSpeech = null;
+let isPlaying = false;
+
+function speakSlide(slideId) {
+    const container = document.getElementById(slideId);
+    if (!container) return;
+
+    const isKhmer = container.classList.contains('lang-km-mode');
+    // ប្រើប្រាស់ 'km' សម្រាប់ភាសាខ្មែរ
+    const lang = isKhmer ? 'km' : 'en-US';
+
+    // Collect text from all relevant elements
+    const textElements = container.querySelectorAll(
+        '.slide-title, .slide-subtitle, .step-card p, .step-card h3, ' +
+        '.pillar-card p, .pillar-card h3, .checklist-text p, .checklist-text h3, ' +
+        '.two-column.tiled p, .two-column.tiled h3, .profile-card-modern h3, ' +
+        '.profile-card-modern p, .table-layout td, .table-layout th, .slide-title-wrapper p, ' +
+        '.slide-title-wrapper h2, .slide-title-wrapper h3, .slide-title-wrapper .slide-subtitle'
+    );
+
+    let fullText = '';
+    textElements.forEach(el => {
+        const visibleText = getVisibleText(el, isKhmer);
+        if (visibleText && visibleText.trim().length > 0) {
+            fullText += visibleText.trim() + '. ';
+        }
+    });
+
+    // Fallback: if no text found, use content-area
+    if (!fullText.trim()) {
+        const mainContent = container.querySelector('.content-area');
+        if (mainContent) {
+            fullText = mainContent.textContent.trim();
+        }
+    }
+
+    fullText = fullText.replace(/\s+/g, ' ').trim();
+
+    if (!fullText) {
+        alert(isKhmer ? 'មិនមានអត្ថបទសម្រាប់អានទេ!' : 'No text to read!');
+        return;
+    }
+
+    // Stop current speech if playing
+    if (currentSpeech) {
+        window.speechSynthesis.cancel();
+        currentSpeech = null;
+        isPlaying = false;
+        updateAudioButton(slideId, false);
+        return;
+    }
+
+    // Create new speech
+    const speech = new SpeechSynthesisUtterance(fullText);
+    speech.lang = lang;
+    speech.rate = 0.85;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    // Try to find a voice that supports the language
+    const voices = window.speechSynthesis.getVoices();
+    
+    if (isKhmer) {
+        // ព្យាយាមរកសំឡេងខ្មែរ
+        let khmerVoice = voices.find(v => v.lang.startsWith('km'));
+        
+        // បើរកមិនឃើញ ប្រើសំឡេងដែលអាចអានអក្សរខ្មែរបាន
+        if (!khmerVoice) {
+            // ព្យាយាមរកសំឡេងដែលគាំទ្រភាសាខ្មែរ
+            khmerVoice = voices.find(v => 
+                v.lang.includes('km') || 
+                v.lang.includes('KH') ||
+                v.name.includes('Khmer') ||
+                v.name.includes('Cambodia')
+            );
+        }
+        
+        // បើរកឃើញសំឡេង ប្រើវា
+        if (khmerVoice) {
+            speech.voice = khmerVoice;
+        } else {
+            // បើមិនឃើញសំឡេងខ្មែរ ប្រើ Google ឬ Microsoft voices
+            const fallbackVoice = voices.find(v => 
+                v.lang.startsWith('km') || 
+                v.lang.includes('KH') ||
+                v.name.includes('Google') || 
+                v.name.includes('Microsoft') ||
+                v.name.includes('Samantha') ||
+                v.name.includes('Alex')
+            );
+            if (fallbackVoice) {
+                speech.voice = fallbackVoice;
+            }
+        }
+    } else {
+        // For English, try to find a good voice
+        const englishVoice = voices.find(v => 
+            v.lang.startsWith('en') && 
+            (v.name.includes('Google') || v.name.includes('Microsoft') || v.name.includes('Samantha'))
+        );
+        if (englishVoice) {
+            speech.voice = englishVoice;
+        }
+    }
+
+    speech.onstart = function() {
+        isPlaying = true;
+        updateAudioButton(slideId, true);
+    };
+
+    speech.onend = function() {
+        isPlaying = false;
+        updateAudioButton(slideId, false);
+        currentSpeech = null;
+    };
+
+    speech.onerror = function(event) {
+        isPlaying = false;
+        updateAudioButton(slideId, false);
+        currentSpeech = null;
+        console.error('Speech error:', event);
+        
+        // បើមានកំហុស សាកប្រើសំឡេងផ្សេង
+        if (isKhmer) {
+            // សាកប្រើសំឡេងអង់គ្លេសជាមួយការបញ្ចេញសំឡេងខ្មែរ
+            const retrySpeech = new SpeechSynthesisUtterance(fullText);
+            retrySpeech.lang = 'km';
+            retrySpeech.rate = 0.7;
+            retrySpeech.pitch = 1.1;
+            
+            const voices = window.speechSynthesis.getVoices();
+            const anyVoice = voices.find(v => v.lang.startsWith('en'));
+            if (anyVoice) {
+                retrySpeech.voice = anyVoice;
+            }
+            
+            retrySpeech.onstart = function() {
+                isPlaying = true;
+                updateAudioButton(slideId, true);
+            };
+            
+            retrySpeech.onend = function() {
+                isPlaying = false;
+                updateAudioButton(slideId, false);
+                currentSpeech = null;
+            };
+            
+            currentSpeech = retrySpeech;
+            window.speechSynthesis.speak(retrySpeech);
+        } else {
+            alert('មានបញ្ហាក្នុងការអានសំឡេង។ សូមព្យាយាមម្តងទៀត!');
+        }
+    };
+
+    currentSpeech = speech;
+    window.speechSynthesis.speak(speech);
+}
+
+function getVisibleText(element, isKhmer) {
+    // Check for data-lang attributes
+    const langElements = element.querySelectorAll('[data-lang]');
+    if (langElements.length > 0) {
+        let text = '';
+        langElements.forEach(el => {
+            const langAttr = el.getAttribute('data-lang');
+            if ((isKhmer && langAttr === 'km') || (!isKhmer && langAttr === 'en')) {
+                text += el.textContent + ' ';
+            }
+        });
+        return text;
+    }
+
+    // Check for lang-km / lang-en classes
+    const kmElements = element.querySelectorAll('.lang-km');
+    const enElements = element.querySelectorAll('.lang-en');
+    if (kmElements.length > 0 || enElements.length > 0) {
+        let text = '';
+        if (isKhmer) {
+            kmElements.forEach(el => text += el.textContent + ' ');
+        } else {
+            enElements.forEach(el => text += el.textContent + ' ');
+        }
+        return text;
+    }
+
+    return element.textContent;
+}
+
+function updateAudioButton(slideId, playing) {
+    // Map slide ID to button ID
+    let btnId = 'audio-btn-' + slideId.replace('slide', '').replace('_benefits', '10');
+    const btn = document.getElementById(btnId);
+    if (btn) {
+        if (playing) {
+            btn.classList.add('playing');
+            const icon = btn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-stop';
+            const span = btn.querySelector('span');
+            if (span) {
+                const container = document.getElementById(slideId);
+                const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
+                span.textContent = isKhmer ? 'បញ្ឈប់' : 'Stop';
+            }
+        } else {
+            btn.classList.remove('playing');
+            const icon = btn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-volume-high';
+            const span = btn.querySelector('span');
+            if (span) {
+                const container = document.getElementById(slideId);
+                const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
+                span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
+            }
+        }
+    }
+}
+
+// Load voices when available
+window.speechSynthesis.onvoiceschanged = function() {
+    const voices = window.speechSynthesis.getVoices();
+    console.log('Voices loaded:', voices.length);
+    // Log Khmer voices if available
+    const khmerVoices = voices.filter(v => v.lang.startsWith('km') || v.lang.includes('KH'));
+    if (khmerVoices.length > 0) {
+        console.log('Khmer voices found:', khmerVoices.map(v => v.name));
+    } else {
+        console.log('No Khmer voices found. Using fallback.');
+    }
+};
+
+// Load voices immediately
+window.speechSynthesis.getVoices();
+    </script>
+
+</body></html>
