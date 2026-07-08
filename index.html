@@ -1,560 +1,39 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Digital Complaint System Presentation</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Kantumruy+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #0b0f19;
-            display: grid;
-            gap: 40px;
-            grid-template-columns: 1fr;
-            margin: 0;
-            padding: 60px 0;
-            place-items: center;
-        }
-
-        .slide-container {
-            background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
-            border-radius: 16px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-            font-family: 'Inter', 'Kantumruy Pro', sans-serif;
-            height: 720px;
-            justify-content: space-between;
-            overflow: hidden;
-            padding: 55px 80px 40px 80px;
-            position: relative;
-            width: 1280px;
-            color: #f8fafc;
-        }
-
-        .slide-container::before {
-            content: '';
-            position: absolute;
-            top: -150px;
-            right: -150px;
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .slide-container h1,
-        .slide-container h2,
-        .slide-container h3,
-        .slide-container h4 {
-            font-family: 'Kantumruy Pro', 'Inter', sans-serif;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .slide-title-wrapper {
-            width: 100%;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .slide-title {
-            font-size: 34px;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .slide-title::before {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 34px;
-            background: linear-gradient(to bottom, #38bdf8, #2563eb);
-            border-radius: 4px;
-        }
-
-        .slide-subtitle {
-            font-size: 13.5px;
-            color: #38bdf8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 5px;
-            padding-left: 21px;
-            display: block;
-            font-weight: 500;
-        }
-
-        .content-area {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            width: 100%;
-        }
-
-        .two-column.tiled>div {
-            background: rgba(30, 41, 59, 0.4);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 35px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s;
-        }
-
-        .two-column.tiled h3 {
-            color: #38bdf8;
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .two-column.tiled p {
-            font-size: 15.5px;
-            color: #cbd5e1;
-            text-align: justify;
-            margin: 0;
-            line-height: 1.7;
-        }
-
-        .horizontal-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            width: 100%;
-        }
-
-        .step-card {
-            background: rgba(30, 41, 59, 0.3);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 28px 22px;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .step-badge {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(37, 99, 235, 0.15) 100%);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            padding: 4px 14px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
-
-        .step-card h3 {
-            color: #ffffff;
-            font-size: 19px;
-            margin-bottom: 10px;
-        }
-
-        .step-card p {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            width: 100%;
-        }
-
-        .pillar-card {
-            background: rgba(30, 41, 59, 0.4);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .pillar-icon {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
-            color: #38bdf8;
-            height: 65px;
-            width: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin: 0 auto 22px auto;
-            border: 1px solid rgba(56, 189, 248, 0.15);
-        }
-
-        .pillar-card h3 {
-            color: #ffffff;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .pillar-card p {
-            font-size: 14.5px;
-            color: #94a3b8;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .checklist-wrapper {
-            background: rgba(30, 41, 59, 0.3);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-            width: 100%;
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 18px;
-        }
-
-        .checklist-item i {
-            color: #10b981;
-            font-size: 22px;
-            margin-top: 4px;
-        }
-
-        .checklist-item.danger i {
-            color: #ef4444;
-        }
-
-        .checklist-text h3 {
-            color: #ffffff;
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
-
-        .checklist-text p {
-            color: #cbd5e1;
-            font-size: 14.5px;
-            margin: 0;
-        }
-
-        .table-layout {
-            width: 100%;
-            background-color: #0f172a;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        }
-
-        .table-layout table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        .table-layout th,
-        .table-layout td {
-            padding: 14px 16px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 13.5px;
-        }
-
-        .table-layout th {
-            background-color: #1e293b;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .table-layout tr:last-child td {
-            border-bottom: none;
-        }
-
-        .state-badge {
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .state-done {
-            background-color: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-        .state-pending {
-            background-color: rgba(245, 158, 11, 0.15);
-            color: #fbbf24;
-            border: 1px solid rgba(245, 158, 11, 0.2);
-        }
-        .state-processing {
-            background-color: rgba(37, 99, 235, 0.15);
-            color: #60a5fa;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-        }
-
-        .alert-badge {
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        .alert-danger {
-            background-color: rgba(239, 68, 68, 0.15);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.2);
-        }
-        .alert-success {
-            background-color: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        .profile-container-modern {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            gap: 20px;
-            width: 100%;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        .profile-card-modern {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 22px 18px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 220px;
-            min-width: 200px;
-            flex: 1 1 0;
-            max-width: 280px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .profile-card-modern h3 {
-            font-size: 20px;
-            line-height: 1.3;
-            min-height: 48px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-
-        .avatar-circle-modern {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            background: #0f172a;
-            border: 3px solid #2563eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: #38bdf8;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .avatar-circle-modern img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .role-badge-modern {
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-            font-size: 10px;
-            padding: 3px 12px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(56, 189, 248, 0.15);
-        }
-
-        .slide-footer {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 18px;
-        }
-
-        .slide-footer span {
-            font-size: 12.5px;
-            color: #64748b;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 25px;
-            right: 80px;
-            z-index: 100;
-            display: flex;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8;
-            padding: 6px 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn:hover {
-            border-color: rgba(56, 189, 248, 0.5);
-            color: #ffffff;
-        }
-
-        .lang-btn.active {
-            background: #2563eb;
-            color: #ffffff;
-            border-color: #38bdf8;
-            box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
-        }
-
-        /* Audio button style */
-        .audio-btn {
-            position: absolute;
-            top: 25px;
-            right: 180px;
-            z-index: 100;
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8;
-            padding: 6px 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .audio-btn:hover {
-            border-color: rgba(56, 189, 248, 0.5);
-            color: #ffffff;
-            background: rgba(56, 189, 248, 0.1);
-        }
-
-        .audio-btn.playing {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: rgba(239, 68, 68, 0.4);
-            color: #f87171;
-            animation: pulse 1s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-
-        .audio-btn i {
-            font-size: 14px;
-        }
-
-        /* Language visibility */
-        .lang-en {
-            display: none !important;
-        }
-
-        .lang-km {
-            display: block !important;
-        }
-
-        [data-lang="km"] {
-            display: block !important;
-        }
-
-        [data-lang="en"] {
-            display: none !important;
-        }
-
-        .slide-container.lang-en-mode [data-lang="km"] {
-            display: none !important;
-        }
-
-        .slide-container.lang-en-mode [data-lang="en"] {
-            display: block !important;
-        }
-
-        .slide-container.lang-en-mode .lang-km {
-            display: none !important;
-        }
-
-        .slide-container.lang-en-mode .lang-en {
-            display: block !important;
-        }
-
-        .slide-container.lang-km-mode [data-lang="km"] {
-            display: block !important;
-        }
-
-        .slide-container.lang-km-mode [data-lang="en"] {
-            display: none !important;
-        }
-
-        .slide-container.lang-km-mode .lang-km {
-            display: block !important;
-        }
-
-        .slide-container.lang-km-mode .lang-en {
-            display: none !important;
-        }
-    </style>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- SLIDE 1: TITLE -->
+    <!-- ===== SLIDE 1: TITLE ===== -->
     <div class="slide-container lang-km-mode" id="slide1">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <!-- Audio Element -->
+        <audio id="audio-slide1" preload="auto">
+            <source src="audio/slide1.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide1')" id="audio-btn-1">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="content-area" style="align-items: center; text-align: center;">
@@ -586,14 +65,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 2: PROJECT ORGANIZERS & COORDINATORS -->
+    <!-- ===== SLIDE 2: PROJECT ORGANIZERS & COORDINATORS ===== -->
     <div class="slide-container lang-km-mode" id="slide2">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide2" preload="auto">
+            <source src="audio/slide2.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide2')" id="audio-btn-2">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -666,14 +152,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 3: WHY DO WE NEED THIS ONLINE SYSTEM? -->
+    <!-- ===== SLIDE 3: WHY DO WE NEED THIS ONLINE SYSTEM? ===== -->
     <div class="slide-container lang-km-mode" id="slide3">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide3" preload="auto">
+            <source src="audio/slide3.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide3')" id="audio-btn-3">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -711,14 +204,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 4: SIMPLE STEPS FOR WORKERS TO USE -->
+    <!-- ===== SLIDE 4: SIMPLE STEPS FOR WORKERS TO USE ===== -->
     <div class="slide-container lang-km-mode" id="slide4">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide4" preload="auto">
+            <source src="audio/slide4.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide4')" id="audio-btn-4">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -773,14 +273,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 5: COMPLAINT & SUGGESTION CATEGORIES -->
+    <!-- ===== SLIDE 5: COMPLAINT & SUGGESTION CATEGORIES ===== -->
     <div class="slide-container lang-km-mode" id="slide5">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide5" preload="auto">
+            <source src="audio/slide5.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide5')" id="audio-btn-5">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -860,14 +367,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 6: CONFIDENTIALITY PROTECTIONS & BEST PRACTICES -->
+    <!-- ===== SLIDE 6: CONFIDENTIALITY PROTECTIONS & BEST PRACTICES ===== -->
     <div class="slide-container lang-km-mode" id="slide6">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide6" preload="auto">
+            <source src="audio/slide6.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide6')" id="audio-btn-6">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -948,14 +462,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 7: SYSTEM OPERATIONAL WORKFLOW -->
+    <!-- ===== SLIDE 7: SYSTEM OPERATIONAL WORKFLOW ===== -->
     <div class="slide-container lang-km-mode" id="slide7">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide7" preload="auto">
+            <source src="audio/slide7.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide7')" id="audio-btn-7">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -1010,14 +531,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 8: IDENTITY CHANNELS -->
+    <!-- ===== SLIDE 8: IDENTITY CHANNELS ===== -->
     <div class="slide-container lang-km-mode" id="slide8">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide8" preload="auto">
+            <source src="audio/slide8.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide8')" id="audio-btn-8">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -1051,14 +579,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 9: LIVE BACK-END ADMINISTRATION SHEET STRUCTURE -->
+    <!-- ===== SLIDE 9: LIVE BACK-END ADMINISTRATION SHEET STRUCTURE ===== -->
     <div class="slide-container lang-km-mode" id="slide9">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide9" preload="auto">
+            <source src="audio/slide9.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide9')" id="audio-btn-9">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper">
@@ -1142,14 +677,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 10: KEY STRATEGIC BENEFITS -->
-    <div class="slide-container lang-km-mode" id="slide_benefits" style="position: relative;">
+    <!-- ===== SLIDE 10: KEY STRATEGIC BENEFITS ===== -->
+    <div class="slide-container lang-km-mode" id="slide10">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
-        <button class="audio-btn" onclick="speakSlide('slide_benefits')" id="audio-btn-10">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+        
+        <audio id="audio-slide10" preload="auto">
+            <source src="audio/slide10.mp3" type="audio/mpeg">
+        </audio>
+        
+        <button class="audio-btn" onclick="speakSlide('slide10')" id="audio-btn-10">
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div style="position: absolute; bottom: -50px; left: 20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
@@ -1205,14 +747,21 @@
         </div>
     </div>
 
-    <!-- SLIDE 11: FINAL / QR CODE -->
+    <!-- ===== SLIDE 11: FINAL / QR CODE ===== -->
     <div class="slide-container lang-km-mode" id="slide11">
         <div class="lang-switcher">
             <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
             <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
         </div>
+        
+        <audio id="audio-slide11" preload="auto">
+            <source src="audio/slide11.mp3" type="audio/mpeg">
+        </audio>
+        
         <button class="audio-btn" onclick="speakSlide('slide11')" id="audio-btn-11">
-            <i class="fa-solid fa-volume-high"></i> <span data-lang="km">ស្តាប់</span><span data-lang="en">Listen</span>
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
         </button>
 
         <div class="slide-title-wrapper" style="text-align: center; border-left: none; padding-left: 0;">
@@ -1269,290 +818,7 @@
         </div>
     </div>
 
-    <script>
-        // ============================================================
-        // 1. LANGUAGE SWITCH FUNCTION (រក្សាទុកដើម)
-        // ============================================================
-        function switchLang(lang) {
-            const containers = document.querySelectorAll('.slide-container');
-            containers.forEach(container => {
-                container.classList.remove('lang-km-mode', 'lang-en-mode');
-                if (lang === 'en') {
-                    container.classList.add('lang-en-mode');
-                } else {
-                    container.classList.add('lang-km-mode');
-                }
-            });
-
-            const allButtons = document.querySelectorAll('.lang-btn');
-            allButtons.forEach(btn => {
-                if (lang === 'en') {
-                    if (btn.classList.contains('en-btn')) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                } else {
-                    if (btn.classList.contains('km-btn')) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                }
-            });
-
-            // Stop any playing audio when language changes
-            if (currentSpeech) {
-                window.speechSynthesis.cancel();
-                currentSpeech = null;
-                isPlaying = false;
-                document.querySelectorAll('.audio-btn').forEach(btn => {
-                    btn.classList.remove('playing');
-                    const icon = btn.querySelector('i');
-                    if (icon) icon.className = 'fa-solid fa-volume-high';
-                    const span = btn.querySelector('span');
-                    if (span) {
-                        span.textContent = lang === 'km' ? 'ស្តាប់' : 'Listen';
-                    }
-                });
-            }
-        }
-
-        // ============================================================
-// 2. TEXT-TO-SPEECH FUNCTION (កែលម្អសម្រាប់ភាសាខ្មែរ)
-// ============================================================
-let currentSpeech = null;
-let isPlaying = false;
-
-function speakSlide(slideId) {
-    const container = document.getElementById(slideId);
-    if (!container) return;
-
-    const isKhmer = container.classList.contains('lang-km-mode');
-    // ប្រើប្រាស់ 'km' សម្រាប់ភាសាខ្មែរ
-    const lang = isKhmer ? 'km' : 'en-US';
-
-    // Collect text from all relevant elements
-    const textElements = container.querySelectorAll(
-        '.slide-title, .slide-subtitle, .step-card p, .step-card h3, ' +
-        '.pillar-card p, .pillar-card h3, .checklist-text p, .checklist-text h3, ' +
-        '.two-column.tiled p, .two-column.tiled h3, .profile-card-modern h3, ' +
-        '.profile-card-modern p, .table-layout td, .table-layout th, .slide-title-wrapper p, ' +
-        '.slide-title-wrapper h2, .slide-title-wrapper h3, .slide-title-wrapper .slide-subtitle'
-    );
-
-    let fullText = '';
-    textElements.forEach(el => {
-        const visibleText = getVisibleText(el, isKhmer);
-        if (visibleText && visibleText.trim().length > 0) {
-            fullText += visibleText.trim() + '. ';
-        }
-    });
-
-    // Fallback: if no text found, use content-area
-    if (!fullText.trim()) {
-        const mainContent = container.querySelector('.content-area');
-        if (mainContent) {
-            fullText = mainContent.textContent.trim();
-        }
-    }
-
-    fullText = fullText.replace(/\s+/g, ' ').trim();
-
-    if (!fullText) {
-        alert(isKhmer ? 'មិនមានអត្ថបទសម្រាប់អានទេ!' : 'No text to read!');
-        return;
-    }
-
-    // Stop current speech if playing
-    if (currentSpeech) {
-        window.speechSynthesis.cancel();
-        currentSpeech = null;
-        isPlaying = false;
-        updateAudioButton(slideId, false);
-        return;
-    }
-
-    // Create new speech
-    const speech = new SpeechSynthesisUtterance(fullText);
-    speech.lang = lang;
-    speech.rate = 0.85;
-    speech.pitch = 1;
-    speech.volume = 1;
-
-    // Try to find a voice that supports the language
-    const voices = window.speechSynthesis.getVoices();
-    
-    if (isKhmer) {
-        // ព្យាយាមរកសំឡេងខ្មែរ
-        let khmerVoice = voices.find(v => v.lang.startsWith('km'));
-        
-        // បើរកមិនឃើញ ប្រើសំឡេងដែលអាចអានអក្សរខ្មែរបាន
-        if (!khmerVoice) {
-            // ព្យាយាមរកសំឡេងដែលគាំទ្រភាសាខ្មែរ
-            khmerVoice = voices.find(v => 
-                v.lang.includes('km') || 
-                v.lang.includes('KH') ||
-                v.name.includes('Khmer') ||
-                v.name.includes('Cambodia')
-            );
-        }
-        
-        // បើរកឃើញសំឡេង ប្រើវា
-        if (khmerVoice) {
-            speech.voice = khmerVoice;
-        } else {
-            // បើមិនឃើញសំឡេងខ្មែរ ប្រើ Google ឬ Microsoft voices
-            const fallbackVoice = voices.find(v => 
-                v.lang.startsWith('km') || 
-                v.lang.includes('KH') ||
-                v.name.includes('Google') || 
-                v.name.includes('Microsoft') ||
-                v.name.includes('Samantha') ||
-                v.name.includes('Alex')
-            );
-            if (fallbackVoice) {
-                speech.voice = fallbackVoice;
-            }
-        }
-    } else {
-        // For English, try to find a good voice
-        const englishVoice = voices.find(v => 
-            v.lang.startsWith('en') && 
-            (v.name.includes('Google') || v.name.includes('Microsoft') || v.name.includes('Samantha'))
-        );
-        if (englishVoice) {
-            speech.voice = englishVoice;
-        }
-    }
-
-    speech.onstart = function() {
-        isPlaying = true;
-        updateAudioButton(slideId, true);
-    };
-
-    speech.onend = function() {
-        isPlaying = false;
-        updateAudioButton(slideId, false);
-        currentSpeech = null;
-    };
-
-    speech.onerror = function(event) {
-        isPlaying = false;
-        updateAudioButton(slideId, false);
-        currentSpeech = null;
-        console.error('Speech error:', event);
-        
-        // បើមានកំហុស សាកប្រើសំឡេងផ្សេង
-        if (isKhmer) {
-            // សាកប្រើសំឡេងអង់គ្លេសជាមួយការបញ្ចេញសំឡេងខ្មែរ
-            const retrySpeech = new SpeechSynthesisUtterance(fullText);
-            retrySpeech.lang = 'km';
-            retrySpeech.rate = 0.7;
-            retrySpeech.pitch = 1.1;
-            
-            const voices = window.speechSynthesis.getVoices();
-            const anyVoice = voices.find(v => v.lang.startsWith('en'));
-            if (anyVoice) {
-                retrySpeech.voice = anyVoice;
-            }
-            
-            retrySpeech.onstart = function() {
-                isPlaying = true;
-                updateAudioButton(slideId, true);
-            };
-            
-            retrySpeech.onend = function() {
-                isPlaying = false;
-                updateAudioButton(slideId, false);
-                currentSpeech = null;
-            };
-            
-            currentSpeech = retrySpeech;
-            window.speechSynthesis.speak(retrySpeech);
-        } else {
-            alert('មានបញ្ហាក្នុងការអានសំឡេង។ សូមព្យាយាមម្តងទៀត!');
-        }
-    };
-
-    currentSpeech = speech;
-    window.speechSynthesis.speak(speech);
-}
-
-function getVisibleText(element, isKhmer) {
-    // Check for data-lang attributes
-    const langElements = element.querySelectorAll('[data-lang]');
-    if (langElements.length > 0) {
-        let text = '';
-        langElements.forEach(el => {
-            const langAttr = el.getAttribute('data-lang');
-            if ((isKhmer && langAttr === 'km') || (!isKhmer && langAttr === 'en')) {
-                text += el.textContent + ' ';
-            }
-        });
-        return text;
-    }
-
-    // Check for lang-km / lang-en classes
-    const kmElements = element.querySelectorAll('.lang-km');
-    const enElements = element.querySelectorAll('.lang-en');
-    if (kmElements.length > 0 || enElements.length > 0) {
-        let text = '';
-        if (isKhmer) {
-            kmElements.forEach(el => text += el.textContent + ' ');
-        } else {
-            enElements.forEach(el => text += el.textContent + ' ');
-        }
-        return text;
-    }
-
-    return element.textContent;
-}
-
-function updateAudioButton(slideId, playing) {
-    // Map slide ID to button ID
-    let btnId = 'audio-btn-' + slideId.replace('slide', '').replace('_benefits', '10');
-    const btn = document.getElementById(btnId);
-    if (btn) {
-        if (playing) {
-            btn.classList.add('playing');
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'fa-solid fa-stop';
-            const span = btn.querySelector('span');
-            if (span) {
-                const container = document.getElementById(slideId);
-                const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
-                span.textContent = isKhmer ? 'បញ្ឈប់' : 'Stop';
-            }
-        } else {
-            btn.classList.remove('playing');
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'fa-solid fa-volume-high';
-            const span = btn.querySelector('span');
-            if (span) {
-                const container = document.getElementById(slideId);
-                const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
-                span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
-            }
-        }
-    }
-}
-
-// Load voices when available
-window.speechSynthesis.onvoiceschanged = function() {
-    const voices = window.speechSynthesis.getVoices();
-    console.log('Voices loaded:', voices.length);
-    // Log Khmer voices if available
-    const khmerVoices = voices.filter(v => v.lang.startsWith('km') || v.lang.includes('KH'));
-    if (khmerVoices.length > 0) {
-        console.log('Khmer voices found:', khmerVoices.map(v => v.name));
-    } else {
-        console.log('No Khmer voices found. Using fallback.');
-    }
-};
-
-// Load voices immediately
-window.speechSynthesis.getVoices();
-    </script>
-
-</body></html>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
