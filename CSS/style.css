@@ -565,16 +565,13 @@ body {
         min-height: 720px;
         padding: 40px 50px 30px 50px;
     }
-    
     .slide-title {
         font-size: 28px;
     }
-    
     .horizontal-steps {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-    
     .pillars-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -586,52 +583,42 @@ body {
         padding: 25px 20px 20px 20px;
         min-height: auto;
     }
-    
     .slide-title {
         font-size: 22px;
     }
-    
     .two-column {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
     .horizontal-steps {
         grid-template-columns: 1fr;
         gap: 12px;
     }
-    
     .pillars-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-    
     .profile-container-modern {
         gap: 12px;
     }
-    
     .profile-card-modern {
         width: 100%;
         max-width: 100%;
         flex: none;
     }
-    
     .lang-switcher, .audio-btn {
         top: 15px;
         right: 15px;
     }
-    
     .audio-btn {
         right: 90px;
         font-size: 11px;
         padding: 4px 10px;
     }
-    
     .lang-btn {
         font-size: 10px;
         padding: 4px 10px;
     }
-    
     .table-layout {
         overflow-x: auto;
     }
@@ -641,24 +628,19 @@ body {
     .slide-container {
         padding: 20px 12px 15px 12px;
     }
-    
     .slide-title {
         font-size: 18px;
     }
-    
     .slide-subtitle {
         font-size: 11px;
         padding-left: 12px;
     }
-    
     .two-column.tiled>div {
         padding: 20px;
     }
-    
     .step-card {
         padding: 18px 16px;
     }
-    
     .pillar-card {
         padding: 20px 16px;
     }

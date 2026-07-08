@@ -40,20 +40,17 @@ let currentAudio = null;
 let isAudioPlaying = false;
 let currentSlideId = null;
 
-/**
- * មុខងារសម្រាប់លេងសំឡេងពី Audio File
- */
 function speakSlide(slideId) {
-    // ប្រសិនបើកំពុងលេងសំឡេងដដែល បញ្ឈប់
+    // If clicking the same slide that is currently playing, stop it
     if (currentSlideId === slideId && isAudioPlaying) {
         stopAllAudio();
         return;
     }
 
-    // បញ្ឈប់សំឡេងចាស់ប្រសិនបើមាន
+    // Stop any old audio
     stopAllAudio();
 
-    // ពិនិត្យមើលថាមានឯកសារសំឡេងឬអត់
+    // Check if audio element exists
     const audioElement = document.getElementById('audio-' + slideId);
     if (!audioElement) {
         console.warn('⚠️ No audio file found for slide:', slideId);
@@ -62,15 +59,15 @@ function speakSlide(slideId) {
         return;
     }
 
-    // កំណត់អត្តសញ្ញាណ
+    // Set current audio
     currentSlideId = slideId;
     currentAudio = audioElement;
     isAudioPlaying = true;
 
-    // ធ្វើបច្ចុប្បន្នភាពប៊ូតុង
+    // Update button
     updateAudioButton(slideId, true);
 
-    // លេងសំឡេង
+    // Play audio
     audioElement.play().catch(error => {
         console.error('Error playing audio:', error);
         isAudioPlaying = false;
@@ -78,7 +75,7 @@ function speakSlide(slideId) {
         alert('មានបញ្ហាក្នុងការលេងឯកសារសំឡេង! សូមពិនិត្យមើលឯកសារ។');
     });
 
-    // ពេលលេងចប់
+    // When audio ends
     audioElement.onended = function() {
         isAudioPlaying = false;
         updateAudioButton(slideId, false);
@@ -86,7 +83,7 @@ function speakSlide(slideId) {
         currentSlideId = null;
     };
 
-    // ពេលមានកំហុស
+    // When error occurs
     audioElement.onerror = function() {
         isAudioPlaying = false;
         updateAudioButton(slideId, false);
@@ -96,9 +93,6 @@ function speakSlide(slideId) {
     };
 }
 
-/**
- * មុខងារសម្រាប់បញ្ឈប់សំឡេងទាំងអស់
- */
 function stopAllAudio() {
     if (currentAudio) {
         currentAudio.pause();
@@ -107,7 +101,7 @@ function stopAllAudio() {
     }
     isAudioPlaying = false;
     
-    // ធ្វើបច្ចុប្បន្នភាពប៊ូតុងទាំងអស់
+    // Update all audio buttons
     document.querySelectorAll('.audio-btn').forEach(btn => {
         btn.classList.remove('playing');
         const icon = btn.querySelector('i');
@@ -126,7 +120,6 @@ function stopAllAudio() {
 // 3. UPDATE AUDIO BUTTON
 // ============================================================
 function updateAudioButton(slideId, playing) {
-    // Map slide ID to button ID
     let btnId = 'audio-btn-' + slideId.replace('slide', '').replace('_benefits', '10');
     const btn = document.getElementById(btnId);
     
@@ -193,7 +186,7 @@ console.log('📁 Please place audio files in the "audio" folder:');
 console.log('   audio/slide1.mp3, audio/slide2.mp3, ...');
 console.log('⌨️ Press Space bar to play/stop audio on current slide');
 
-// ពិនិត្យ Audio Files ដែលមាន
+// Check audio files on load
 document.addEventListener('DOMContentLoaded', function() {
     const audioElements = document.querySelectorAll('audio');
     console.log(`🎵 Found ${audioElements.length} audio elements`);
