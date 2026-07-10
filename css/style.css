@@ -1,5 +1,32 @@
+/* ============================================================
+   TABLE OF CONTENTS
+   ============================================================
+   1. RESET & BASE STYLES
+   2. SLIDE CONTAINER
+   3. TOP CONTROLS (Audio + Language)
+   4. SLIDE CONTROLS (for slide 3)
+   5. TYPOGRAPHY & TITLES
+   6. CONTENT AREA & LAYOUTS
+   7. PROFILE CARDS
+   8. ORGANIZATION FLOW CHART
+   9. STEP CARDS
+  10. PILLAR CARDS
+  11. CHECKLIST
+  12. TABLES
+  13. BADGES
+  14. FOOTER
+  15. LANGUAGE TOGGLE SYSTEM
+  16. ANIMATIONS
+  17. RESPONSIVE DESIGN
+   ============================================================ */
+
+/* ============================================================
+   1. RESET & BASE STYLES
+   ============================================================ */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -10,8 +37,17 @@ body {
     margin: 0;
     padding: 60px 0;
     place-items: center;
+    font-family: 'Inter', 'Kantumruy Pro', sans-serif;
+    color: #f8fafc;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================================
+   2. SLIDE CONTAINER
+   ============================================================ */
 .slide-container {
     background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
     border-radius: 16px;
@@ -19,16 +55,16 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', 'Kantumruy Pro', sans-serif;
     height: 720px;
     justify-content: space-between;
     overflow: hidden;
     padding: 55px 80px 40px 80px;
     position: relative;
     width: 1280px;
-    color: #f8fafc;
+    animation: fadeInSlide 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* Background Glow Effects */
 .slide-container::before {
     content: '';
     position: absolute;
@@ -40,6 +76,199 @@ body {
     pointer-events: none;
 }
 
+.slide-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    animation: particleFloat 6s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+/* ============================================================
+   3. TOP CONTROLS (Audio + Language Grouped)
+   ============================================================ */
+.top-controls {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 100;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.75);
+    padding: 6px 14px 6px 8px;
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.top-controls .audio-btn {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 8px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.top-controls .audio-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: scale(1.03);
+}
+
+.top-controls .audio-btn i {
+    font-size: 15px;
+}
+
+.top-controls .audio-btn.playing {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #f87171;
+    animation: pulse 1s infinite;
+}
+
+.top-controls .lang-switcher {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    display: flex;
+    gap: 6px;
+}
+
+.top-controls .lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    min-width: 44px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.top-controls .lang-btn:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #ffffff;
+    background: rgba(56, 189, 248, 0.05);
+}
+
+.top-controls .lang-btn.active {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================================
+   4. SLIDE CONTROLS (for slide 3)
+   ============================================================ */
+.slide-controls {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 100;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.75);
+    padding: 6px 14px 6px 8px;
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.slide-controls .audio-btn {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 8px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.slide-controls .audio-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: scale(1.03);
+}
+
+.slide-controls .audio-btn.playing {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #f87171;
+    animation: pulse 1s infinite;
+}
+
+.slide-controls .lang-switcher-box {
+    display: flex;
+    gap: 6px;
+}
+
+.slide-controls .lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    min-width: 44px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.slide-controls .lang-btn:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #ffffff;
+    background: rgba(56, 189, 248, 0.05);
+}
+
+.slide-controls .lang-btn.active {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================================
+   5. TYPOGRAPHY & TITLES
+   ============================================================ */
 .slide-container h1,
 .slide-container h2,
 .slide-container h3,
@@ -50,10 +279,37 @@ body {
     line-height: 1.4;
 }
 
+.slide-container h1 {
+    animation: floatTitle 4s ease-in-out infinite;
+}
+
+/* Slow Shimmer Animation - 8 seconds */
+@keyframes shimmer {
+    0% {
+        background-position: -400% center;
+    }
+    100% {
+        background-position: 400% center;
+    }
+}
+
+.slide-container h1 span {
+    background-size: 400% auto !important;
+    animation: shimmer 8s ease-in-out infinite !important;
+}
+
 .slide-title-wrapper {
     width: 100%;
     margin-bottom: 20px;
     position: relative;
+}
+
+.slide-title-wrapper p {
+    animation: typewriter 1s ease-out forwards;
+}
+
+.slide-container:nth-child(1) .slide-title-wrapper p {
+    animation-delay: 1s;
 }
 
 .slide-title {
@@ -62,6 +318,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    animation: spotlight 4s ease-in-out infinite;
 }
 
 .slide-title::before {
@@ -82,8 +339,17 @@ body {
     padding-left: 21px;
     display: block;
     font-weight: 500;
+    animation: fadeInSubtitle 0.6s ease-out forwards;
+    opacity: 0;
 }
 
+.slide-container:nth-child(1) .slide-subtitle {
+    animation-delay: 0.5s;
+}
+
+/* ============================================================
+   6. CONTENT AREA & LAYOUTS
+   ============================================================ */
 .content-area {
     display: flex;
     flex-direction: column;
@@ -92,7 +358,7 @@ body {
     width: 100%;
 }
 
-/* Grid Layouts */
+/* Two Column Layout */
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,7 +366,7 @@ body {
     width: 100%;
 }
 
-.two-column.tiled>div {
+.two-column.tiled > div {
     background: rgba(30, 41, 59, 0.4);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -110,7 +376,7 @@ body {
     transition: transform 0.2s;
 }
 
-.two-column.tiled>div:hover {
+.two-column.tiled > div:hover {
     transform: translateY(-4px);
 }
 
@@ -131,7 +397,244 @@ body {
     line-height: 1.7;
 }
 
-/* Horizontal Steps */
+/* ============================================================
+   7. PROFILE CARDS
+   ============================================================ */
+.profile-container-modern {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.profile-card-modern {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    min-width: 200px;
+    flex: 1 1 0;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card-modern:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card-modern h3 {
+    font-size: 20px;
+    line-height: 1.3;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.avatar-circle-modern {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 3px solid #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #38bdf8;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: avatarPulse 3s ease-in-out infinite;
+}
+
+.avatar-circle-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.role-badge-modern {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    font-size: 10px;
+    padding: 3px 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+/* ============================================================
+   8. ORGANIZATION FLOW CHART
+   ============================================================ */
+.org-flow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    flex-grow: 1;
+}
+
+.org-flow-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Flow Levels */
+.flow-level {
+    position: relative;
+}
+
+.flow-level.level-1 {
+    margin-bottom: 50px;
+}
+
+.flow-level.level-1::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.flow-level.level-2 {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    width: 100%;
+}
+
+/* Flow Cards */
+.flow-card {
+    background: #111a2e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 260px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.flow-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+.flow-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.manager-card {
+    margin-bottom: 45px;
+}
+
+.manager-card::after {
+    content: '';
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    width: 2px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.flow-children {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.staff-card {
+    width: 250px;
+    padding: 10px 15px;
+}
+
+/* Flow Avatars */
+.flow-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    flex-shrink: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.av-red   { background: linear-gradient(135deg, #ff512f, #dd2476); }
+.av-blue  { background: linear-gradient(135deg, #1fa2ff, #12d8fa); }
+.av-green { background: linear-gradient(135deg, #11998e, #38ef7d); }
+
+/* Flow Info */
+.flow-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+}
+
+.emp-name {
+    margin: 0 0 2px 0;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.emp-role {
+    margin: 0 0 2px 0;
+    font-size: 11.5px;
+    color: #94a3b8;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.emp-id {
+    font-size: 10.5px;
+    color: #38bdf8;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ============================================================
+   9. STEP CARDS
+   ============================================================ */
 .horizontal-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -147,10 +650,17 @@ body {
     position: relative;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInLeft 0.6s ease-out forwards;
+    animation: borderGlow 3s ease-in-out infinite;
 }
 
+.step-card:nth-child(1) { animation-delay: 0.1s; }
+.step-card:nth-child(2) { animation-delay: 0.2s; }
+.step-card:nth-child(3) { animation-delay: 0.3s; }
+.step-card:nth-child(4) { animation-delay: 0.4s; }
+
 .step-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-6px) scale(1.01);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
@@ -164,6 +674,7 @@ body {
     font-weight: 600;
     display: inline-block;
     margin-bottom: 16px;
+    animation: pulseBadge 2s ease-in-out infinite;
 }
 
 .step-card h3 {
@@ -179,7 +690,9 @@ body {
     margin: 0;
 }
 
-/* Pillars Grid */
+/* ============================================================
+   10. PILLAR CARDS
+   ============================================================ */
 .pillars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -194,11 +707,17 @@ body {
     padding: 35px 25px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.7s ease-out forwards;
 }
 
+.pillar-card:nth-child(1) { animation-delay: 0.1s; }
+.pillar-card:nth-child(2) { animation-delay: 0.2s; }
+.pillar-card:nth-child(3) { animation-delay: 0.3s; }
+
 .pillar-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .pillar-icon {
@@ -213,6 +732,7 @@ body {
     font-size: 26px;
     margin: 0 auto 22px auto;
     border: 1px solid rgba(56, 189, 248, 0.15);
+    animation: glowPulse 3s ease-in-out infinite;
 }
 
 .pillar-card h3 {
@@ -228,7 +748,9 @@ body {
     line-height: 1.6;
 }
 
-/* Checklist */
+/* ============================================================
+   11. CHECKLIST
+   ============================================================ */
 .checklist-wrapper {
     background: rgba(30, 41, 59, 0.3);
     border-radius: 16px;
@@ -238,13 +760,25 @@ body {
     flex-direction: column;
     gap: 22px;
     width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checklist-wrapper:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .checklist-item {
     display: flex;
     align-items: flex-start;
     gap: 18px;
+    animation: fadeInCheck 0.5s ease-out forwards;
 }
+
+.checklist-item:nth-child(1) { animation-delay: 0.1s; }
+.checklist-item:nth-child(2) { animation-delay: 0.2s; }
+.checklist-item:nth-child(3) { animation-delay: 0.3s; }
+.checklist-item:nth-child(4) { animation-delay: 0.4s; }
 
 .checklist-item i {
     color: #10b981;
@@ -268,7 +802,9 @@ body {
     margin: 0;
 }
 
-/* Table */
+/* ============================================================
+   12. TABLES
+   ============================================================ */
 .table-layout {
     width: 100%;
     background-color: #0f172a;
@@ -301,7 +837,19 @@ body {
     border-bottom: none;
 }
 
-/* Status Badges */
+.table-layout tbody tr {
+    animation: rowFade 0.4s ease-out forwards;
+}
+
+.table-layout tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table-layout tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table-layout tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.table-layout tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.table-layout tbody tr:nth-child(5) { animation-delay: 0.5s; }
+
+/* ============================================================
+   13. BADGES
+   ============================================================ */
 .state-badge {
     padding: 4px 12px;
     border-radius: 30px;
@@ -316,115 +864,41 @@ body {
     color: #34d399;
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
+
 .state-pending {
     background-color: rgba(245, 158, 11, 0.15);
     color: #fbbf24;
     border: 1px solid rgba(245, 158, 11, 0.2);
 }
+
 .state-processing {
     background-color: rgba(37, 99, 235, 0.15);
     color: #60a5fa;
     border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-/* Alert Badges */
 .alert-badge {
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
 }
+
 .alert-danger {
     background-color: rgba(239, 68, 68, 0.15);
     color: #f87171;
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
+
 .alert-success {
     background-color: rgba(16, 185, 129, 0.15);
     color: #34d399;
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
-/* Profile Cards */
-.profile-container-modern {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    width: 100%;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-.profile-card-modern {
-    background: rgba(30, 41, 59, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 22px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 220px;
-    min-width: 200px;
-    flex: 1 1 0;
-    max-width: 280px;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.profile-card-modern:hover {
-    transform: translateY(-6px);
-}
-
-.profile-card-modern h3 {
-    font-size: 20px;
-    line-height: 1.3;
-    min-height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-.avatar-circle-modern {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    background: #0f172a;
-    border: 3px solid #2563eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    color: #38bdf8;
-    overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.avatar-circle-modern img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.role-badge-modern {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    font-size: 10px;
-    padding: 3px 12px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(56, 189, 248, 0.15);
-}
-
-/* Footer */
+/* ============================================================
+   14. FOOTER
+   ============================================================ */
 .slide-footer {
     width: 100%;
     display: flex;
@@ -432,6 +906,17 @@ body {
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 18px;
+    position: relative;
+}
+
+.slide-footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    animation: progressFill 1.5s ease-out forwards;
 }
 
 .slide-footer span {
@@ -439,103 +924,29 @@ body {
     color: #64748b;
 }
 
-/* Language Switcher */
-.lang-switcher {
-    position: absolute;
-    top: 25px;
-    right: 80px;
-    z-index: 100;
-    display: flex;
-    gap: 10px;
+/* ============================================================
+   15. LANGUAGE TOGGLE SYSTEM
+   ============================================================ */
+/* Default: Show Khmer, Hide English */
+[data-lang="km"] {
+    display: inline-block !important;
 }
-
-.lang-btn {
-    background: rgba(30, 41, 59, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94a3b8;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.lang-btn:hover {
-    border-color: rgba(56, 189, 248, 0.5);
-    color: #ffffff;
-}
-
-.lang-btn.active {
-    background: #2563eb;
-    color: #ffffff;
-    border-color: #38bdf8;
-    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
-}
-
-/* Audio Button */
-.audio-btn {
-    position: absolute;
-    top: 25px;
-    right: 180px;
-    z-index: 100;
-    background: rgba(30, 41, 59, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94a3b8;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.audio-btn:hover {
-    border-color: rgba(56, 189, 248, 0.5);
-    color: #ffffff;
-    background: rgba(56, 189, 248, 0.1);
-}
-
-.audio-btn.playing {
-    background: rgba(239, 68, 68, 0.2);
-    border-color: rgba(239, 68, 68, 0.4);
-    color: #f87171;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-}
-
-.audio-btn i {
-    font-size: 14px;
-}
-
-/* Language Visibility */
-.lang-en {
+[data-lang="en"] {
     display: none !important;
 }
 .lang-km {
     display: block !important;
 }
-
-[data-lang="km"] {
-    display: block !important;
-}
-[data-lang="en"] {
+.lang-en {
     display: none !important;
 }
 
+/* English Mode: Show English, Hide Khmer */
 .slide-container.lang-en-mode [data-lang="km"] {
     display: none !important;
 }
 .slide-container.lang-en-mode [data-lang="en"] {
-    display: block !important;
+    display: inline-block !important;
 }
 .slide-container.lang-en-mode .lang-km {
     display: none !important;
@@ -544,8 +955,9 @@ body {
     display: block !important;
 }
 
+/* Khmer Mode: Show Khmer, Hide English */
 .slide-container.lang-km-mode [data-lang="km"] {
-    display: block !important;
+    display: inline-block !important;
 }
 .slide-container.lang-km-mode [data-lang="en"] {
     display: none !important;
@@ -557,7 +969,217 @@ body {
     display: none !important;
 }
 
-/* Responsive Design */
+/* Heading spans */
+h1 span[data-lang], 
+h2 span[data-lang], 
+h3 span[data-lang], 
+p span[data-lang] {
+    display: none;
+}
+
+.slide-container.lang-km-mode span[data-lang="km"],
+.slide-container.lang-en-mode span[data-lang="en"] {
+    display: inline;
+}
+
+/* ============================================================
+   16. ANIMATIONS
+   ============================================================ */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes floatTitle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Slow Shimmer - 8 seconds */
+@keyframes shimmer {
+    0% {
+        background-position: -400% center;
+    }
+    100% {
+        background-position: 400% center;
+    }
+}
+
+@keyframes pulseBadge {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceAudio {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes glowActive {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(37, 99, 235, 0.7);
+    }
+}
+
+@keyframes fadeInSubtitle {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: rgba(56, 189, 248, 0.2);
+    }
+    50% {
+        border-color: rgba(56, 189, 248, 0.6);
+    }
+}
+
+@keyframes fadeInCheck {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rowFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 0.3;
+    }
+}
+
+@keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes spotlight {
+    0% {
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0);
+    }
+}
+
+@keyframes avatarPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+}
+
+@keyframes typewriter {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* QR Code Glow */
+.slide-container:last-child img {
+    animation: qrGlow 3s ease-in-out infinite;
+}
+
+@keyframes qrGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(37, 99, 235, 0.4);
+    }
+}
+
+/* ============================================================
+   17. RESPONSIVE DESIGN
+   ============================================================ */
 @media (max-width: 1366px) {
     .slide-container {
         width: 95%;
@@ -575,6 +1197,38 @@ body {
     .pillars-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .flow-level.level-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .profile-container-modern {
+        gap: 15px;
+    }
+    .profile-card-modern {
+        width: 180px;
+        min-width: 150px;
+    }
+    .top-controls,
+    .slide-controls {
+        padding: 4px 10px 4px 6px;
+        gap: 10px;
+    }
+    .top-controls .audio-btn,
+    .slide-controls .audio-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+        min-width: 80px;
+    }
+    .top-controls .lang-btn,
+    .slide-controls .lang-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+        min-width: 38px;
     }
 }
 
@@ -606,21 +1260,42 @@ body {
         max-width: 100%;
         flex: none;
     }
-    .lang-switcher, .audio-btn {
-        top: 15px;
-        right: 15px;
-    }
-    .audio-btn {
-        right: 90px;
-        font-size: 11px;
-        padding: 4px 10px;
-    }
-    .lang-btn {
-        font-size: 10px;
-        padding: 4px 10px;
-    }
     .table-layout {
         overflow-x: auto;
+    }
+    .org-flow-wrapper {
+        overflow-x: auto;
+    }
+    .flow-card {
+        width: 220px;
+    }
+    .staff-card {
+        width: 200px;
+    }
+    .top-controls,
+    .slide-controls {
+        top: 15px;
+        right: 15px;
+        padding: 4px 8px 4px 4px;
+        gap: 8px;
+        border-radius: 20px;
+    }
+    .top-controls .audio-btn,
+    .slide-controls .audio-btn {
+        padding: 5px 12px;
+        font-size: 11px;
+        min-width: 70px;
+        gap: 6px;
+    }
+    .top-controls .audio-btn i,
+    .slide-controls .audio-btn i {
+        font-size: 12px;
+    }
+    .top-controls .lang-btn,
+    .slide-controls .lang-btn {
+        padding: 5px 10px;
+        font-size: 10px;
+        min-width: 34px;
     }
 }
 
@@ -635,7 +1310,7 @@ body {
         font-size: 11px;
         padding-left: 12px;
     }
-    .two-column.tiled>div {
+    .two-column.tiled > div {
         padding: 20px;
     }
     .step-card {
@@ -643,5 +1318,50 @@ body {
     }
     .pillar-card {
         padding: 20px 16px;
+    }
+    .flow-card {
+        width: 180px;
+        padding: 10px 12px;
+    }
+    .staff-card {
+        width: 170px;
+    }
+    .flow-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .emp-name {
+        font-size: 12px;
+    }
+    .emp-role {
+        font-size: 10px;
+    }
+    .top-controls,
+    .slide-controls {
+        top: 10px;
+        right: 10px;
+        padding: 3px 6px 3px 3px;
+        gap: 5px;
+        border-radius: 16px;
+    }
+    .top-controls .audio-btn,
+    .slide-controls .audio-btn {
+        padding: 4px 10px;
+        font-size: 10px;
+        min-width: 60px;
+        gap: 4px;
+        border-radius: 16px;
+    }
+    .top-controls .audio-btn i,
+    .slide-controls .audio-btn i {
+        font-size: 10px;
+    }
+    .top-controls .lang-btn,
+    .slide-controls .lang-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+        min-width: 30px;
+        border-radius: 14px;
     }
 }

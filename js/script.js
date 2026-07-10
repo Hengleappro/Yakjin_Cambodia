@@ -29,8 +29,12 @@ function switchLang(lang) {
         }
     });
 
-    // Stop any playing audio when language changes
-    stopAllAudio();
+    // Automatically update UI text for the currently playing audio button if any
+    if (isAudioPlaying && currentSlideId) {
+        updateAudioButton(currentSlideId, true);
+    } else if (currentSlideId) {
+        updateAudioButton(currentSlideId, false);
+    }
 }
 
 // ============================================================
@@ -54,7 +58,8 @@ function speakSlide(slideId) {
     const audioElement = document.getElementById('audio-' + slideId);
     if (!audioElement) {
         console.warn('⚠️ No audio file found for slide:', slideId);
-        const isKhmer = document.getElementById(slideId).classList.contains('lang-km-mode');
+        const container = document.getElementById(slideId);
+        const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
         alert(isKhmer ? 'មិនមានឯកសារសំឡេងសម្រាប់ Slide នេះទេ!' : 'No audio file found for this slide!');
         return;
     }
@@ -106,55 +111,80 @@ function stopAllAudio() {
         btn.classList.remove('playing');
         const icon = btn.querySelector('i');
         if (icon) icon.className = 'fa-solid fa-volume-high';
-        const span = btn.querySelector('span');
-        if (span) {
-            const container = btn.closest('.slide-container');
-            const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
-            span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
+        
+        const container = btn.closest('.slide-container');
+        const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
+        
+        // Update specific text spans if they exist inside button
+        const spans = btn.querySelectorAll('span[data-lang]');
+        if (spans.length === 0) {
+            const span = btn.querySelector('span');
+            if (span) span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
         }
     });
     currentSlideId = null;
 }
 
 // ============================================================
-// 3. UPDATE AUDIO BUTTON
+// 3. UPDATE AUDIO BUTTON (supports .top-controls & .slide-controls)
 // ============================================================
 function updateAudioButton(slideId, playing) {
-    let btnId = 'audio-btn-' + slideId.replace('slide', '').replace('_benefits', '10');
-    const btn = document.getElementById(btnId);
+    const container = document.getElementById(slideId);
+    if (!container) return;
     
+    // Try to find button in multiple locations
+    let btn = container.querySelector('.audio-btn');
     if (!btn) {
-        btnId = 'audio-btn-' + slideId;
-        const btnAlt = document.getElementById(btnId);
-        if (btnAlt) {
-            updateButtonUI(btnAlt, playing, slideId);
+        const controls = container.querySelector('.slide-controls');
+        if (controls) {
+            btn = controls.querySelector('.audio-btn');
         }
-        return;
+    }
+    if (!btn) {
+        const topControls = container.querySelector('.top-controls');
+        if (topControls) {
+            btn = topControls.querySelector('.audio-btn');
+        }
     }
     
-    updateButtonUI(btn, playing, slideId);
+    if (btn) {
+        updateButtonUI(btn, playing, slideId);
+    }
 }
 
 function updateButtonUI(btn, playing, slideId) {
+    const container = document.getElementById(slideId);
+    const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
+
     if (playing) {
         btn.classList.add('playing');
         const icon = btn.querySelector('i');
         if (icon) icon.className = 'fa-solid fa-stop';
-        const span = btn.querySelector('span');
-        if (span) {
-            const container = document.getElementById(slideId);
-            const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
-            span.textContent = isKhmer ? 'បញ្ឈប់' : 'Stop';
+        
+        const spanKm = btn.querySelector('span[data-lang="km"]');
+        const spanEn = btn.querySelector('span[data-lang="en"]');
+        
+        if (spanKm && spanEn) {
+            spanKm.textContent = 'បញ្ឈប់';
+            spanEn.textContent = 'Stop';
+        } else {
+            const span = btn.querySelector('span');
+            if (span) span.textContent = isKhmer ? 'បញ្ឈប់' : 'Stop';
         }
     } else {
         btn.classList.remove('playing');
         const icon = btn.querySelector('i');
         if (icon) icon.className = 'fa-solid fa-volume-high';
-        const span = btn.querySelector('span');
-        if (span) {
-            const container = document.getElementById(slideId);
-            const isKhmer = container ? container.classList.contains('lang-km-mode') : true;
-            span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
+        
+        const spanKm = btn.querySelector('span[data-lang="km"]');
+        const spanEn = btn.querySelector('span[data-lang="en"]');
+        
+        if (spanKm && spanEn) {
+            spanKm.textContent = 'ស្តាប់';
+            spanEn.textContent = 'Listen';
+        } else {
+            const span = btn.querySelector('span');
+            if (span) span.textContent = isKhmer ? 'ស្តាប់' : 'Listen';
         }
     }
 }
@@ -166,7 +196,15 @@ document.addEventListener('keydown', function(event) {
     // Space bar: play/stop audio
     if (event.key === ' ' || event.key === 'Space') {
         event.preventDefault();
-        const activeSlide = document.querySelector('.slide-container.lang-km-mode, .slide-container.lang-en-mode');
+        
+        let activeSlide = null;
+        
+        if (isAudioPlaying && currentSlideId) {
+            activeSlide = document.getElementById(currentSlideId);
+        } else {
+            activeSlide = document.querySelector('.slide-container');
+        }
+        
         if (activeSlide) {
             const slideId = activeSlide.id;
             if (isAudioPlaying && currentSlideId === slideId) {
@@ -182,15 +220,83 @@ document.addEventListener('keydown', function(event) {
 // 5. INITIALIZATION
 // ============================================================
 console.log('🎵 Audio System loaded!');
-console.log('📁 Please place audio files in the "audio" folder:');
-console.log('   audio/slide1.mp3, audio/slide2.mp3, ...');
 console.log('⌨️ Press Space bar to play/stop audio on current slide');
 
-// Check audio files on load
 document.addEventListener('DOMContentLoaded', function() {
     const audioElements = document.querySelectorAll('audio');
     console.log(`🎵 Found ${audioElements.length} audio elements`);
-    audioElements.forEach((audio, index) => {
-        console.log(`   ${index + 1}. ${audio.id || 'unnamed'}`);
+    
+    const containers = document.querySelectorAll('.slide-container');
+    containers.forEach(c => {
+        if (!c.classList.contains('lang-en-mode') && !c.classList.contains('lang-km-mode')) {
+            c.classList.add('lang-km-mode');
+        }
+    });
+});
+
+// ============================================================
+// 6. SCROLL ANIMATION - Intersection Observer
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll(
+        '.step-card, .pillar-card, ' +
+        '.profile-card-modern, .checklist-item, .table-layout tbody tr'
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -30px 0px'
+    });
+
+    animateElements.forEach(el => {
+        observer.observe(el);
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        animateElements.forEach(el => {
+            if (el.classList.contains('visible')) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    });
+});
+
+console.log('✨ Animations loaded successfully!');
+
+// ============================================================
+// 7. CHECK AUDIO FILES ON LOAD
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const audioElements = document.querySelectorAll('audio');
+    console.log(`🎵 Found ${audioElements.length} audio elements`);
+    
+    audioElements.forEach(audio => {
+        const src = audio.querySelector('source');
+        if (src) {
+            console.log(`📁 Audio file: ${src.src}`);
+            fetch(src.src, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        console.log(`✅ Audio file exists: ${src.src}`);
+                    } else {
+                        console.warn(`⚠️ Audio file NOT FOUND: ${src.src}`);
+                    }
+                })
+                .catch(err => {
+                    console.error(`❌ Error checking audio: ${src.src}`, err);
+                });
+        }
     });
 });

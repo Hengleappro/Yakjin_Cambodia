@@ -18,38 +18,40 @@
 </head>
 <body>
 
-    <!-- ===== SLIDE 1: TITLE ===== -->
+    <!-- ============================================================ -->
+    <!-- SLIDE 1: TITLE                                                 -->
+    <!-- ============================================================ -->
     <div class="slide-container lang-km-mode" id="slide1">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide1')" id="audio-btn-1">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <!-- Audio Element -->
         <audio id="audio-slide1" preload="auto">
             <source src="audio/slide1.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide1')" id="audio-btn-1">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="content-area" style="align-items: center; text-align: center;">
             <div style="margin-bottom: 15px;">
-                <h3 style="color: #38bdf8; font-size: 24px; letter-spacing: 1px; font-weight: 600; margin-bottom: 5px;">យ៉ាកជីន (ខេមបូឌា) អ៊ិន</h3>
+                <h3 style="color: #38bdf8; font-size: 24px; letter-spacing: 1px; font-weight: 600; margin-bottom: 5px;">យ៉ាក់ជីន (ខេមបូឌា) អិន</h3>
                 <h2 style="font-family: 'Inter', sans-serif; font-size: 18px; color: #94a3b8; letter-spacing: 2px; font-weight: 500;">YAKJIN (CAMBODIA) INC.</h2>
             </div>
 
             <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #38bdf8, #2563eb); margin: 15px 0 30px 0;"></div>
 
             <h1 style="font-size: 54px; color: #ffffff; margin-bottom: 15px; letter-spacing: -0.5px; max-width: 1000px; line-height: 1.3;">
-                <span data-lang="km">ប្រព័ន្ធប្រអប់មតិយោបល់ <br><span style="background: linear-gradient(to right, #38bdf8, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">និងបណ្តឹងតវ៉ាឌីជីថល (CSR)</span></span>
+                <span data-lang="km">ប្រព័ន្ធបណ្តឹងឌីជីថល <br><span style="background: linear-gradient(to right, #38bdf8, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">និងបណ្តាញស្នើសុំគំនិត (CSR)</span></span>
                 <span data-lang="en">Digital Suggestion Box <br><span style="background: linear-gradient(to right, #38bdf8, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">&amp; Complaint System (CSR)</span></span>
             </h1>
             <p style="font-size: 19px; color: #94a3b8; max-width: 850px; margin: 0 0 40px 0;">
-                <span data-lang="km">យន្តការទទួលព័ត៌មានប្រកបដោយតម្លាភាព សុវត្ថិភាព និងរក្សាសម្ងាត់ខ្ពស់</span>
+                <span data-lang="km">យន្តការទទួលពាក្យបណ្តឹង ប្រកបដោយតម្លាភាព សុវត្ថិភាព និងការសម្ងាត់ខ្ពស់</span>
                 <span data-lang="en">A Transparent, Secure, and Highly Confidential Grievance Mechanism</span>
             </p>
 
@@ -61,26 +63,29 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 1 of 11</span>
+            <span>Slide 1 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 2: PROJECT ORGANIZERS & COORDINATORS ===== -->
+    <!-- ============================================================ -->
+    <!-- SLIDE 2: PROJECT ORGANIZERS & COORDINATORS                     -->
+    <!-- ============================================================ -->
     <div class="slide-container lang-km-mode" id="slide2">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide2')" id="audio-btn-2">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
         <audio id="audio-slide2" preload="auto">
             <source src="audio/slide2.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide2')" id="audio-btn-2">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
@@ -97,10 +102,10 @@
                         <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1753510998/iim7nnbttuupatglhot0.jpg" alt="Lim Hengleab">
                     </div>
                     <div class="role-badge-modern">System Developer</div>
-                    <h3 data-lang="km">លោក លីម ហេងលៀប</h3>
+                    <h3 data-lang="km">លោក លីម ហេងលាប</h3>
                     <h3 data-lang="en">Mr. Lim Hengleab</h3>
                     <p style="font-size: 18px; color: #38bdf8; margin: 0;">
-                        <span data-lang="km">ការិយាល័យផ្នែក IT</span>
+                        <span data-lang="km">ការិយាល័យបច្ចេកវិទ្យា IT</span>
                         <span data-lang="en">IT Department Office</span>
                     </p>
                 </div>
@@ -110,7 +115,7 @@
                         <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783143691/jvhnv4x8ai8wnshtxezw.jpg" alt="Son Chamrouen">
                     </div>
                     <div class="role-badge-modern">System Coordinator</div>
-                    <h3 data-lang="km">លោក សុន ចំរើន</h3>
+                    <h3 data-lang="km">លោក សុន ចំរឿន</h3>
                     <h3 data-lang="en">Mr. Son Chamrouen</h3>
                     <p style="font-size: 18px; color: #38bdf8; margin: 0;">
                         <span data-lang="km">ជំនួយការ CSR</span>
@@ -123,7 +128,7 @@
                         <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783153906/rjtvp5jtmeihtmvjvxdc.jpg" alt="Bun Srey">
                     </div>
                     <div class="role-badge-modern">CSR Manager</div>
-                    <h3 data-lang="km">លោក ស្រី ប៊ុន</h3>
+                    <h3 data-lang="km">លោក ប៊ុន ស្រេី</h3>
                     <h3 data-lang="en">Mr. Bun Srey</h3>
                     <p style="font-size: 18px; color: #38bdf8; margin: 0;">
                         <span data-lang="km">ប្រធាន CSR</span>
@@ -148,26 +153,365 @@
 
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 2 of 11</span>
+            <span>Slide 2 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 3: WHY DO WE NEED THIS ONLINE SYSTEM? ===== -->
+    <!-- ============================================================ -->
+    <!-- SLIDE 3: GRIEVANCE COMMITTEE - MANAGEMENT                      -->
+    <!-- ============================================================ -->
     <div class="slide-container lang-km-mode" id="slide3">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        <div class="slide-controls">
+            <button class="audio-btn" onclick="speakSlide('slide3')" id="audio-btn-3">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher-box">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
         <audio id="audio-slide3" preload="auto">
             <source src="audio/slide3.mp3" type="audio/mpeg">
         </audio>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">រចនាសម្ព័ន្ធគណៈកម្មការ និងឋានានុក្រមការងារ</span>
+                <span data-lang="en">Committee Structure & Management Hierarchy</span>
+            </h2>
+            <span class="slide-subtitle">
+                <span data-lang="km">1. តំណាងភាគីខាងគ្រប់គ្រង</span>
+                <span data-lang="en">1. Management Representatives</span>
+            </span>
+        </div>
+
+        <div class="content-area">
+            <div class="org-flow-wrapper">
+                <div class="org-flow-tree">
+                    <!-- Level 1: General Director -->
+                    <div class="flow-level level-1">
+                        <div class="flow-card leader-card">
+                            <div class="flow-avatar av-red">FC</div>
+                            <div class="flow-info">
+                                <h3 class="emp-name">Mr. Felix Cho</h3>
+                                <p class="emp-role">General Director / Chairman</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2: Managers -->
+                    <div class="flow-level level-2">
+                        <!-- HR Branch -->
+                        <div class="flow-branch">
+                            <div class="flow-card manager-card">
+                                <div class="flow-avatar av-blue">KS</div>
+                                <div class="flow-info">
+                                    <h3 class="emp-name">Ms. Kong Sokunthea</h3>
+                                    <p class="emp-role">HR Manager / Ombudsman</p>
+                                    <span class="emp-id">ID: 0907395</span>
+                                </div>
+                            </div>
+                            <div class="flow-children">
+                                <div class="flow-card staff-card">
+                                    <div class="flow-avatar av-green">TC</div>
+                                    <div class="flow-info">
+                                        <h4 class="emp-name">Ms. Thorn Chanthol</h4>
+                                        <p class="emp-role">HR Assistance / MGMT. REP</p>
+                                        <span class="emp-id">ID: 0607559</span>
+                                    </div>
+                                </div>
+                                <div class="flow-card staff-card">
+                                    <div class="flow-avatar av-green">KS</div>
+                                    <div class="flow-info">
+                                        <h4 class="emp-name">Ms. Kroch Sreynou</h4>
+                                        <p class="emp-role">HR Assistance / MGMT. REP</p>
+                                        <span class="emp-id">ID: 2305001</span>
+                                    </div>
+                                </div>
+                                <div class="flow-card staff-card">
+                                    <div class="flow-avatar av-green">SS</div>
+                                    <div class="flow-info">
+                                        <h4 class="emp-name">Ms. Sarom Sreyream</h4>
+                                        <p class="emp-role">HR Assistance / MGMT. REP</p>
+                                        <span class="emp-id">ID: 2406055</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CSR Branch -->
+                        <div class="flow-branch">
+                            <div class="flow-card manager-card">
+                                <div class="flow-avatar av-blue">BS</div>
+                                <div class="flow-info">
+                                    <h3 class="emp-name">Mr. Bun Srey</h3>
+                                    <p class="emp-role">CSR Manager / Secretary</p>
+                                    <span class="emp-id">ID: 2505131</span>
+                                </div>
+                            </div>
+                            <div class="flow-children">
+                                <div class="flow-card staff-card">
+                                    <div class="flow-avatar av-green">SC</div>
+                                    <div class="flow-info">
+                                        <h4 class="emp-name">Mr. Son Chamrouen</h4>
+                                        <p class="emp-role">CSR Assistance / MGMT. REP</p>
+                                        <span class="emp-id">ID: 2309001</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 3 of 16</span>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SLIDE 4: GRIEVANCE COMMITTEE - WORKER REPS                    -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide4">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide4')" id="audio-btn-4">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
+        </div>
         
-        <button class="audio-btn" onclick="speakSlide('slide3')" id="audio-btn-3">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
+        <audio id="audio-slide4" preload="auto">
+            <source src="audio/slide4.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">សមាជិកគណៈកម្មការដោះស្រាយបណ្តឹងនៅក្នុងក្រុមហ៊ុន យ៉ាក់ជីន (ខេមបូឌា)អិន</span>
+                <span data-lang="en">Grievance Committee in Yakjin (Cambodia) Inc.</span>
+            </h2>
+            <span class="slide-subtitle">
+                <span data-lang="km">2. តំណាងកម្មករ</span>
+                <span data-lang="en">2. Worker Representatives</span>
+            </span>
+        </div>
+
+        <div class="content-area">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%;">
+                <!-- Worker 1 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #38bdf8); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">VS</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោក វុឌ្ឍន៍ សុខាណា</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">Sewing</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 1304130</p>
+                </div>
+
+                <!-- Worker 2 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #34d399); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">KS</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោកស្រី គុម ស្រីណា</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">PSC</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 1207112</p>
+                </div>
+
+                <!-- Worker 3 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #fbbf24); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">KM</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោកស្រី កុង ម៉ាលីស</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">Sample</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 0706559</p>
+                </div>
+
+                <!-- Worker 4 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #a855f7, #c084fc); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">HK</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោកស្រី ហ៊ក កេី</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">Sewing</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 2212002</p>
+                </div>
+
+                <!-- Worker 5 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #ef4444, #f87171); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">KN</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោកស្រី ខុន សុខណា</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">QC</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 2006010</p>
+                </div>
+
+                <!-- Worker 6 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #06b6d4, #22d3ee); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">BS</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោក ប៊ុន សុភា</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">Cutting</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 0706236</p>
+                </div>
+
+                <!-- Worker 7 -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #f472b6, #fb7185); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; margin: 0 auto 10px auto; font-weight: 700;">HO</div>
+                    <h4 style="color: #ffffff; font-size: 14px; margin: 0;">លោកស្រី ហ្គាង អ៊ីម</h4>
+                    <p style="color: #94a3b8; font-size: 11px; margin: 2px 0;">Sewing</p>
+                    <p style="color: #38bdf8; font-size: 11px; margin: 0;">ID: 1112042</p>
+                </div>
+
+                <!-- Worker 8: More -->
+                <div class="profile-card-modern" style="padding: 16px 12px; width: 100%; max-width: 100%; flex: none; background: rgba(30, 41, 59, 0.3); border: 2px dashed rgba(255,255,255,0.1);">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 24px; color: #64748b; margin: 0 auto 10px auto; font-weight: 700;">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <h4 style="color: #94a3b8; font-size: 14px; margin: 0;">
+                        <span data-lang="km">បន្ថែមទៀត</span>
+                        <span data-lang="en">More</span>
+                    </h4>
+                    <p style="color: #64748b; font-size: 11px; margin: 2px 0;">
+                        <span data-lang="km">តំណាងកម្មករផ្សេងទៀត</span>
+                        <span data-lang="en">Other worker reps</span>
+                    </p>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #64748b; font-size: 12px; margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 14px;">
+                <span data-lang="km">ភ្នំពេញ ថ្ងៃទី ១២ ខែមិថុនា ឆ្នាំ ២០២៥</span>
+                <span data-lang="en">Phnom Penh, June 12, 2025</span>
+            </p>
+        </div>
+
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 4 of 16</span>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SLIDE 5: GRIEVANCE COMMITTEE - ROLES & RESPONSIBILITIES       -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide5">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide5')" id="audio-btn-5">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
+        </div>
+        
+        <audio id="audio-slide5" preload="auto">
+            <source src="audio/slide5.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="slide-title-wrapper">
+            <h2 class="slide-title">
+                <span data-lang="km">សមាជិកគណៈកម្មការដោះស្រាយបណ្តឹងនៅក្រុមហ៊ុន យ៉ាក់ជីន (ខេមបូឌា)អិន</span>
+                <span data-lang="en">Grievance Committee in Yakjin (Cambodia) Inc.</span>
+            </h2>
+            <span class="slide-subtitle">
+                <span data-lang="km">3. តួនាទី និងការពិពណ៌នាការងារ</span>
+                <span data-lang="en">3. Roles and Job Descriptions</span>
+            </span>
+        </div>
+
+        <div class="content-area">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
+                <!-- Chairperson -->
+                <div class="pillar-card" style="border-color: #fbbf24; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(251, 191, 36, 0.05) 100%); text-align: left; padding: 25px 20px;">
+                    <div class="pillar-icon" style="color: #fbbf24; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.2); width: 55px; height: 55px; font-size: 22px; margin: 0 auto 16px auto;">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 style="color: #fbbf24; font-size: 17px; text-align: center; margin-bottom: 12px;">
+                        <span data-lang="km">ប្រធាន (អ្នកគ្រប់គ្រងធនធានមនុស្ស)</span>
+                        <span data-lang="en">Chairperson (HR Manager)</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+                        <li style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-chevron-right" style="color: #fbbf24; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">ដឹកនាំ និងសម្របសម្រួលកិច្ចប្រជុំគណៈកម្មការដោះស្រាយបណ្តឹង</span>
+                            <span data-lang="en">Lead and coordinate grievance committee meetings</span>
+                        </li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-chevron-right" style="color: #fbbf24; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">ធានាថាបណ្តឹងត្រូវបានដោះស្រាយដោយយុត្តិធម៌ ទៀងទាត់ និងទាន់ពេលវេលា</span>
+                            <span data-lang="en">Ensure all grievances are addressed fairly, consistently, and promptly</span>
+                        </li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-chevron-right" style="color: #fbbf24; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">ដឹកនាំការសម្រេចចិត្តរបស់គណៈកម្មការដោយផ្អែកលើគោលការណ៍ក្រុមហ៊ុន និងច្បាប់ការងារ</span>
+                            <span data-lang="en">Guide committee decisions based on company policies and labor law</span>
+                        </li>
+                        <li style="padding: 4px 0;">
+                            <i class="fa-solid fa-chevron-right" style="color: #fbbf24; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">រក្សាអព្យាក្រិត្យ និងការសម្ងាត់</span>
+                            <span data-lang="en">Maintain neutrality and confidentiality</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Committee Members -->
+                <div class="pillar-card" style="border-color: #38bdf8; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(56, 189, 248, 0.05) 100%); text-align: left; padding: 25px 20px;">
+                    <div class="pillar-icon" style="color: #38bdf8; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.2); width: 55px; height: 55px; font-size: 22px; margin: 0 auto 16px auto;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 style="color: #38bdf8; font-size: 17px; text-align: center; margin-bottom: 12px;">
+                        <span data-lang="km">សមាជិកគណៈកម្មការ</span>
+                        <span data-lang="en">Committee Members</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+                        <li style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-chevron-right" style="color: #38bdf8; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">ចូលរួមក្នុងការស៊ើបអង្កេត និងដោះស្រាយបណ្តឹង</span>
+                            <span data-lang="en">Participate in investigations and grievance resolution</span>
+                        </li>
+                        <li style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-chevron-right" style="color: #38bdf8; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">ផ្តល់យោបល់ និងទស្សនៈតំណាងឱ្យភាគីពាក់ព័ន្ធ</span>
+                            <span data-lang="en">Provide input and perspectives representing stakeholders</span>
+                        </li>
+                        <li style="padding: 4px 0;">
+                            <i class="fa-solid fa-chevron-right" style="color: #38bdf8; margin-right: 8px; font-size: 11px;"></i>
+                            <span data-lang="km">រក្សាការសម្ងាត់ និងអព្យាក្រិត្យភាព</span>
+                            <span data-lang="en">Maintain confidentiality and impartiality</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span>Digital Complaint System Deck</span>
+            <span>Slide 5 of 16</span>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SLIDE 6: WHY DO WE NEED THIS ONLINE SYSTEM?                   -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide6">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide6')" id="audio-btn-6">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
+        </div>
+        
+        <audio id="audio-slide6" preload="auto">
+            <source src="audio/slide6.mp3" type="audio/mpeg">
+        </audio>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
@@ -176,7 +520,7 @@
             </h2>
             <span class="slide-subtitle">Purpose and Structural Value</span>
             <p style="color: #94a3b8; font-size: 14px; margin-top: 10px; padding-left: 21px; line-height: 1.6;">
-                <span data-lang="km">ប្រព័ន្ធនេះត្រូវបានរចនាឡើងអោយសាមញ្ញ និងងាយស្រួលប្រើប្រាស់។ ក្រដាសកត់ចំណាំអាចបាត់បង់ ឬខូចខាត ឬក៏អាចដាក់ក្នុងប្រអប់បិទជិតអស់រយៈពេលជាច្រើនសប្តាហ៍ ទើបនរណាម្នាក់អាចបើកវាបាន។ អ្នកមិនចាំបាច់រង់ចាំរហូតដល់អ្នកនៅកន្លែងធ្វើការដើម្បីរាយការណ៍បញ្ហានោះទេ។ ជាមួយប្រព័ន្ធអនឡាញថ្មីនេះ អ្នកអាចស្កែន QR Code និងដាក់សំណើរបស់អ្នកដោយឯកជនតាមទូរស័ព្ទរបស់អ្នកផ្ទាល់—គ្រប់ពេលវេលា គ្រប់ទីកន្លែង។ គ្មាននរណាម្នាក់នឹងឃើញអ្នកដាក់ពាក្យបណ្តឹងឡើយ ហើយស្នាមដៃរបស់អ្នកក៏មិនអាចតាមដានបានដែរ។</span>
+                <span data-lang="km">ប្រព័ន្ធនេះត្រូវបានរចនាឡើងអោយសាមញ្ញ និងងាយស្រួលប្រើ។ ក្រដាសកត់ចំណាំអាចបាត់បង់ ឬខូចខាត ហើយអាចដេកក្នុងប្រអប់ចាក់សោរអស់រយៈពេលជាច្រើនសប្តាហ៍ រហូតដល់មានអ្នកបើក។ អ្នកមិនចាំបាច់រង់ចាំរហូតដល់អ្នកនៅកន្លែងធ្វើការទើបអាចរាយការណ៍បញ្ហាបានទេ។ ជាមួយប្រព័ន្ធអនឡាញថ្មីនេះ អ្នកអាចស្កេន QR Code និងដាក់ពាក្យបណ្តឹងរបស់អ្នកដោយឯកជនដោយប្រើទូរស័ព្ទផ្ទាល់ខ្លួនរបស់អ្នក—គ្រប់ពេលវេលា គ្រប់ទីកន្លែង។ គ្មាននរណាម្នាក់អាចឃើញអ្នកដាក់ពាក្យបណ្តឹងទេ ហើយសរសេរដៃរបស់អ្នកក៏មិនអាចតាមដានបានដែរ។</span>
                 <span data-lang="en">It is designed to be simple and easy to use. Paper notes gets lost and damaged, or sits in a locked box for weeks until someone can open it. You don't need to wait until you are at work to report an issue. With the new online system, you can scan the QR code and submit your concern privately using your own phone—anytime, anywhere. No one will ever see you submitting a report, and your handwriting cannot be traced.</span>
             </p>
         </div>
@@ -185,14 +529,14 @@
                 <div>
                     <h3><i class="fa-solid fa-shield-halved"></i> <span data-lang="km">ធានាភាពសម្ងាត់ និងសុវត្ថិភាព ១០០%</span><span data-lang="en">100% Confidentiality &amp; Safety</span></h3>
                     <p>
-                        <span data-lang="km">ជម្រុញឱ្យបងប្អូនបុគ្គលិក និងកម្មករនិយោជិតទាំងអស់ហ៊ានបញ្ចេញមតិស្ថាបនា ឬរាយការណ៍បញ្ហាពិតប្រាកដក្នុងរោងចក្រ ដោយមិនចាំបាច់ព្រួយបារម្ភពីផលប៉ះពាល់ដល់ការងារ តាមរយៈជម្រើស «មិនបញ្ចេញអត្តសញ្ញាណ» (Anonymous)​​ ពិតប្រាកដ។</span>
+                        <span data-lang="km">ជំរុញឱ្យបុគ្គលិក និងកម្មករគ្រប់រូបផ្តល់មតិកែលម្អ ឬរាយការណ៍បញ្ហារោងចក្រដោយមិនភ័យខ្លាចការសងសឹក ដោយប្រើប្រាស់លក្ខណៈពិសេស "មិនបញ្ចេញអត្តសញ្ញាណ" (Anonymous) ពិតប្រាកដ។</span>
                         <span data-lang="en">Encourages all staff and workers to voice constructive feedback or report factory issues without fear of retaliation, utilizing a genuinely "Anonymous" reporting feature.</span>
                     </p>
                 </div>
                 <div>
-                    <h3><i class="fa-solid fa-circle-nodes"></i> <span data-lang="km">ប្រព័ន្ធចងក្រង និងតាមដានច្បាស់លាស់</span><span data-lang="en">Centralized Tracking System</span></h3>
+                    <h3><i class="fa-solid fa-circle-nodes"></i> <span data-lang="km">ប្រព័ន្ធតាមដានកណ្តាល</span><span data-lang="en">Centralized Tracking System</span></h3>
                     <p>
-                        <span data-lang="km">រាល់ព័ត៌មានដែលបានបំពេញនឹងរត់ចូលទៅក្នុងតារាងគ្រប់គ្រងកណ្តាល (Google Sheet) របស់ផ្នែក CSR ភ្លាមៗ ដោយមានការគណនាថ្ងៃផុតកំណត់ (Deadline Alert) និងការបញ្ជូនដំណឹងអូតូដើម្បីធានាថាគ្រប់បណ្តឹងទាំងអស់ត្រូវបានដោះស្រាយទាន់ពេលវេលា។</span>
+                        <span data-lang="km">រាល់ព័ត៌មានដែលបានបញ្ជូនត្រូវបានបញ្ចូលដោយស្វ័យប្រវត្តិទៅក្នុងមូលដ្ឋានទិន្នន័យកណ្តាល (Google Sheet) ដែលអាចចូលប្រើបានតែបុគ្គលិក CSR ប៉ុណ្ណោះ។ វាមានមុខងារជូនដំណឹងអំពីថ្ងៃកំណត់ (Deadline Alert) និងការជូនដំណឹងដោយស្វ័យប្រវត្តិ ដើម្បីធានាថាបណ្តឹងទាំងអស់ត្រូវបានដោះស្រាយទាន់ពេលវេលា។</span>
                         <span data-lang="en">All submitted data automatically flows into google's centralized database accessible only by HR/CSR. It features real-time Deadline Alerts and auto-notifications to ensure every grievance is resolved on time.</span>
                     </p>
                 </div>
@@ -200,26 +544,29 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 3 of 11</span>
+            <span>Slide 6 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 4: SIMPLE STEPS FOR WORKERS TO USE ===== -->
-    <div class="slide-container lang-km-mode" id="slide4">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 7: SIMPLE STEPS FOR WORKERS TO USE                      -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide7">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide7')" id="audio-btn-7">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide4" preload="auto">
-            <source src="audio/slide4.mp3" type="audio/mpeg">
+        <audio id="audio-slide7" preload="auto">
+            <source src="audio/slide7.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide4')" id="audio-btn-4">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
@@ -232,9 +579,9 @@
             <div class="horizontal-steps">
                 <div class="step-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(37, 99, 235, 0.08) 100%);">
                     <div class="step-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);"><span data-lang="km">ជំហានទី ១</span><span data-lang="en">Step 1</span></div>
-                    <h3 style="color: #38bdf8;"><i class="fa-solid fa-qrcode"></i> <span data-lang="km">ស្កែន QR Code</span><span data-lang="en">Scan QR Code</span></h3>
+                    <h3 style="color: #38bdf8;"><i class="fa-solid fa-qrcode"></i> <span data-lang="km">ស្កេន QR Code</span><span data-lang="en">Scan QR Code</span></h3>
                     <p>
-                        <span data-lang="km">ប្រើប្រាស់ទូរស័ព្ទដៃស្កែនលើរូបភាព QR Code ដែលមានបិទនៅលើក្តារព័ត៌មាន ឬទីតាំងរួមក្នុងរោងចក្រ។</span>
+                        <span data-lang="km">ប្រើប្រាស់ទូរស័ព្ទស្មាតហ្វូនដើម្បីស្កេន QR Code ដែលបានបិទផ្សាយនៅលើក្តារព័ត៌មាន ឬតំបន់សាធារណៈ។</span>
                         <span data-lang="en">Scan the QR Code posted on the announcement boards or common areas using a smartphone.</span>
                     </p>
                 </div>
@@ -243,7 +590,7 @@
                     <div class="step-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);"><span data-lang="km">ជំហានទី ២</span><span data-lang="en">Step 2</span></div>
                     <h3 style="color: #34d399;"><i class="fa-solid fa-list"></i> <span data-lang="km">ជ្រើសរើសប្រភេទបណ្តឹង</span><span data-lang="en">Select Category</span></h3>
                     <p>
-                        <span data-lang="km">ជ្រើសរើសប្រភេទដែលត្រូវនឹងបញ្ហារបស់បងប្អូន (ដូចជា ប្រាក់ឈ្នួល បរិយាកាសការងារ ឬម៉ាស៊ីន...)។</span>
+                        <span data-lang="km">ជ្រើសរើសប្រភេទដែលត្រូវនឹងបញ្ហារបស់អ្នក (ឧទាហរណ៍ សិទ្ធិ សុខភាព និងសុវត្ថិភាព តម្រូវការច្បាប់ យោបល់ ផ្សេងៗ...)</span>
                         <span data-lang="en">Choose the category that matches your issue (e.g., rights, health &amp; safety, legal requirement, recommendation, other ...).</span>
                     </p>
                 </div>
@@ -252,7 +599,7 @@
                     <div class="step-badge" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);"><span data-lang="km">ជំហានទី ៣</span><span data-lang="en">Step 3</span></div>
                     <h3 style="color: #fbbf24;"><i class="fa-solid fa-user-secret"></i> <span data-lang="km">ជ្រើសរើសអត្តសញ្ញាណ</span><span data-lang="en">Choose Identity</span></h3>
                     <p>
-                        <span data-lang="km">ជ្រើសរើស «រក្សាសម្ងាត់ (Anonymous)» ប្រសិនបើមិនចង់ដាក់ឈ្មោះ ឬ «បង្ហាញឈ្មោះ» ដើម្បីងាយស្រួលទាក់ទងត្រឡប់។</span>
+                        <span data-lang="km">ជ្រើសរើស "រក្សាសម្ងាត់ (Anonymous)" ប្រសិនបើអ្នកចង់លាក់ឈ្មោះ ឬ "បង្ហាញឈ្មោះ" ដើម្បីងាយស្រួលតាមដាន។</span>
                         <span data-lang="en">Select "Anonymous" to hide your name or "Provide Name" for easy direct follow-ups.</span>
                     </p>
                 </div>
@@ -261,7 +608,7 @@
                     <div class="step-badge" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.3);"><span data-lang="km">ជំហានទី ៤</span><span data-lang="en">Step 4</span></div>
                     <h3 style="color: #c084fc;"><i class="fa-solid fa-paper-plane"></i> <span data-lang="km">ចុចផ្ញើ (Submit)</span><span data-lang="en">Click Submit</span></h3>
                     <p>
-                        <span data-lang="km">ពិនិត្យព័ត៌មានរួចរាល់ រួចចុចប៊ូតុងផ្ញើ។ ទិន្នន័យនឹងលោតចូលប្រព័ន្ធគ្រប់គ្រងភ្លាមៗដោយស្វ័យប្រវត្តិ។</span>
+                        <span data-lang="km">ពិនិត្យព័ត៌មានឡើងវិញ រួចចុចប៊ូតុងផ្ញើ។ ទិន្នន័យនឹងត្រូវបានធ្វើសមកាលកម្មជាមួយផ្ទាំងគ្រប់គ្រងភ្លាមៗ។</span>
                         <span data-lang="en">Review the details and submit. Data instantly synchronizes with the management panel.</span>
                     </p>
                 </div>
@@ -269,30 +616,33 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 4 of 11</span>
+            <span>Slide 7 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 5: COMPLAINT & SUGGESTION CATEGORIES ===== -->
-    <div class="slide-container lang-km-mode" id="slide5">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 8: COMPLAINT & SUGGESTION CATEGORIES                    -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide8">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide8')" id="audio-btn-8">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide5" preload="auto">
-            <source src="audio/slide5.mp3" type="audio/mpeg">
+        <audio id="audio-slide8" preload="auto">
+            <source src="audio/slide8.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide5')" id="audio-btn-5">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">ប្រភេទបណ្តឹង និងមតិយោបល់ក្នុងប្រព័ន្ធ</span>
+                <span data-lang="km">ប្រភេទបណ្តឹង និងយោបល់ក្នុងប្រព័ន្ធ</span>
                 <span data-lang="en">Complaint &amp; Suggestion Categories</span>
             </h2>
             <span class="slide-subtitle">Official Google Form Complaint Categories</span>
@@ -306,7 +656,7 @@
                     </div>
                     <h3 style="color: #38bdf8; font-size: 15px; text-align: center; margin-bottom: 8px;">Rights &amp; Benefits</h3>
                     <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
-                        <span data-lang="km"><strong style="color: #38bdf8;">និយមន័យ៖</strong> សិទ្ធិគឺជាអ្វីដែលបានសន្យាជូនអ្នកដោយច្បាប់ ស្តង់ដារអនុលោមភាពរបស់ម៉ាក ឬគោលការណ៍របស់ក្រុមហ៊ុន។</span>
+                        <span data-lang="km"><strong style="color: #38bdf8;">និយមន័យ៖</strong> សិទ្ធិជាអ្វីដែលត្រូវបានសន្យាជាមួយអ្នកដោយច្បាប់ ស្តង់ដារម៉ាក ឬគោលការណ៍ក្រុមហ៊ុន។</span>
                         <span data-lang="en"><strong style="color: #38bdf8;">Definition:</strong> A right is something already promised to you by law, brand compliance standards, or company policy.</span>
                     </p>
                 </div>
@@ -317,7 +667,7 @@
                     </div>
                     <h3 style="color: #34d399; font-size: 15px; text-align: center; margin-bottom: 8px;">Health &amp; Safety</h3>
                     <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
-                        <span data-lang="km"><strong style="color: #34d399;">និយមន័យ៖</strong> សំដៅលើលក្ខខណ្ឌ ការអនុវត្ត និងបរិយាកាសរូបវន្តក្នុងរោងចក្រ ដែលប៉ះពាល់ដល់សុវត្ថិភាព សុខភាព និងសុខុមាលភាពរបស់អ្នកពេលកំពុងធ្វើការ។</span>
+                        <span data-lang="km"><strong style="color: #34d399;">និយមន័យ៖</strong> សំដៅលើលក្ខខណ្ឌ ការអនុវត្ត និងបរិយាកាសរាងកាយនៅក្នុងរោងចក្រ ដែលប៉ះពាល់ដល់សុវត្ថិភាព សុខភាព និងសុខុមាលភាពរបស់អ្នកពេលកំពុងធ្វើការ។</span>
                         <span data-lang="en"><strong style="color: #34d399;">Definition:</strong> Refers to the conditions, practices, and physical environment in the factory that affect your safety, health, and well-being while at work.</span>
                     </p>
                 </div>
@@ -328,7 +678,7 @@
                     </div>
                     <h3 style="color: #fbbf24; font-size: 15px; text-align: center; margin-bottom: 8px;">Legal Requirements</h3>
                     <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
-                        <span data-lang="km"><strong style="color: #fbbf24;">និយមន័យ៖</strong> សំដៅលើច្បាប់ផ្លូវការ បទប្បញ្ញត្តិរោងចក្រ និងកិច្ចសន្យាការងារ ដែលក្រុមហ៊ុនត្រូវតែអនុវត្តតាមយ៉ាងតឹងរ៉ឹង ដើម្បីការពារកម្មករ។</span>
+                        <span data-lang="km"><strong style="color: #fbbf24;">និយមន័យ៖</strong> សំដៅលើច្បាប់ផ្លូវការ បទបញ្ជារោងចក្រ និងកិច្ចសន្យាការងារ ដែលក្រុមហ៊ុនត្រូវតែអនុវត្តតាមយ៉ាងតឹងរ៉ឹង ដើម្បីការពារកម្មករ។</span>
                         <span data-lang="en"><strong style="color: #fbbf24;">Definition:</strong> Refer to the official laws, factory regulations, and employment contracts that the company must strictly follow to protect workers.</span>
                     </p>
                 </div>
@@ -339,7 +689,7 @@
                     </div>
                     <h3 style="color: #c084fc; font-size: 15px; text-align: center; margin-bottom: 8px;">Recommendations</h3>
                     <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
-                        <span data-lang="km"><strong style="color: #c084fc;">និយមន័យ៖</strong> គឺជាគំនិត ការណែនាំ និងដំណោះស្រាយប្រកបដោយភាពច្នៃប្រឌិតរបស់អ្នក ដើម្បីកែលម្អកន្លែងធ្វើការ ប្រតិបត្តិការប្រចាំថ្ងៃ និងបរិយាកាសការងារ។</span>
+                        <span data-lang="km"><strong style="color: #c084fc;">និយមន័យ៖</strong> គឺជាគំនិត ការផ្តល់យោបល់ និងដំណោះស្រាយប្រកបដោយភាពច្នៃប្រឌិត ដើម្បីកែលម្អកន្លែងធ្វើការ ប្រតិបត្តិការប្រចាំថ្ងៃ និងបរិយាកាសការងារ។</span>
                         <span data-lang="en"><strong style="color: #c084fc;">Definition:</strong> Are your ideas, suggestions, and creative solutions to improve our workplace, daily operations, and workplace environment.</span>
                     </p>
                 </div>
@@ -350,7 +700,7 @@
                     </div>
                     <h3 style="color: #f87171; font-size: 15px; text-align: center; margin-bottom: 8px;">Other</h3>
                     <p style="font-size: 11.5px; color: #94a3b8; line-height: 1.5; margin: 0;">
-                        <span data-lang="km"><strong style="color: #f87171;">និយមន័យ៖</strong> គឺជាប្រភេទដែលអាចបត់បែនបាន និងមានសុវត្ថិភាព សម្រាប់កង្វល់ សំណួរ ឬបញ្ហាណាមួយដែលមិនស្ថិតក្នុងប្រភេទខាងលើ។</span>
+                        <span data-lang="km"><strong style="color: #f87171;">និយមន័យ៖</strong> គឺជាប្រភេទដែលអាចបត់បែនបាន និងមានសុវត្ថិភាព សម្រាប់រាល់កង្វល់ សំណួរ ឬបញ្ហាដែលមិនទាន់គ្របដណ្តប់ក្នុងប្រភេទខាងលើ។</span>
                         <span data-lang="en"><strong style="color: #f87171;">Definition:</strong> Is a flexible, secure category generally for any concern, question, or issue not covered in the categories above.</span>
                     </p>
                 </div>
@@ -363,30 +713,33 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 5 of 11</span>
+            <span>Slide 8 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 6: CONFIDENTIALITY PROTECTIONS & BEST PRACTICES ===== -->
-    <div class="slide-container lang-km-mode" id="slide6">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 9: CONFIDENTIALITY PROTECTIONS & BEST PRACTICES         -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide9">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide9')" id="audio-btn-9">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide6" preload="auto">
-            <source src="audio/slide6.mp3" type="audio/mpeg">
+        <audio id="audio-slide9" preload="auto">
+            <source src="audio/slide9.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide6')" id="audio-btn-6">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">ការធានាភាពសម្ងាត់ និងវិន័យនៃការរាយការណ៍</span>
+                <span data-lang="km">ការធានាភាពសម្ងាត់ និងវិធីល្អៗក្នុងការរាយការណ៍</span>
                 <span data-lang="en">Confidentiality Protections &amp; Best Practices</span>
             </h2>
             <span class="slide-subtitle">Identity Protection and Reporting Best Practices</span>
@@ -406,7 +759,7 @@
                             <h3 data-lang="km">មិនទាមទារគណនី Gmail ឡើយ</h3>
                             <h3 data-lang="en">No Google Sign-In Required</h3>
                             <p>
-                                <span data-lang="km">ប្រព័ន្ធបើកចំហរទូទៅ មិនតម្រូវឱ្យកម្មករធ្វើការ Sign-in អ៊ីមែលចូលបំពេញឡើយ ធានាថាមិនអាចមានការស្វែងរកគណនីឃើញដាច់ខាត។</span>
+                                <span data-lang="km">ប្រព័ន្ធនេះអាចចូលប្រើបានជាសាធារណៈ។ កម្មករមិនចាំបាច់ត្រូវការចូល Sign-in អ៊ីមែលរបស់ពួកគេឡើយ ដែលធានាថាអត្តសញ្ញាណរបស់ពួកគេត្រូវបានលាក់បាំងទាំងស្រុង។</span>
                                 <span data-lang="en">The form is accessible publicly. Workers do not need to sign in, ensuring complete email anonymity.</span>
                             </p>
                         </div>
@@ -414,10 +767,10 @@
                     <div class="checklist-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <div class="checklist-text">
-                            <h3 data-lang="km">គ្មានការកត់ត្រាប្រវត្តិរូបសម្ងាត់</h3>
+                            <h3 data-lang="km">គ្មានការកត់ត្រាទិន្នន័យមេតា</h3>
                             <h3 data-lang="en">No Metadata Logging</h3>
                             <p>
-                                <span data-lang="km">ទិន្នន័យបច្ចេកទេសទូរស័ព្ទដៃ ឬប្រព័ន្ធ GPS របស់បងប្អូន មិនត្រូវបានតាមដាន ឬរក្សាទុកក្នុងប្រព័ន្ធទិន្នន័យឡើយ។</span>
+                                <span data-lang="km">ទិន្នន័យបច្ចេកទេសដូចជា GPS របស់ទូរស័ព្ទ ម៉ូដែលទូរស័ព្ទ និងព័ត៌មានផ្សេងទៀត មិនត្រូវបានតាមដាន ឬរក្សាទុកក្នុងប្រព័ន្ធទិន្នន័យឡើយ។</span>
                                 <span data-lang="en">Device specs, phone models, and GPS locations are strictly never tracked or stored in the database.</span>
                             </p>
                         </div>
@@ -427,17 +780,17 @@
                 <div class="checklist-wrapper" style="border-color: rgba(239, 68, 68, 0.2); background: rgba(239, 68, 68, 0.03);">
                     <h3 style="color: #f87171; font-size: 19px; margin-bottom: 5px;">
                         <i class="fa-solid fa-triangle-exclamation"></i>
-                        <span data-lang="km">អ្វីដែលបងប្អូនគួរជៀសវាង</span>
+                        <span data-lang="km">អ្វីដែលគួរជៀសវាង</span>
                         <span data-lang="en">Things to Avoid</span>
                     </h3>
 
                     <div class="checklist-item danger">
                         <i class="fa-solid fa-circle-xmark"></i>
                         <div class="checklist-text">
-                            <h3 data-lang="km">ការមួលបង្កាច់ ឬផ្តល់ព័ត៌មានមិនពិត</h3>
+                            <h3 data-lang="km">ការចោទប្រកាន់មិនពិត ឬបង្កាច់បង្ខូច</h3>
                             <h3 data-lang="en">False Allegations &amp; Defamation</h3>
                             <p>
-                                <span data-lang="km">សូមកុំប្រើប្រាស់ប្រព័ន្ធនេះដើម្បីសរសេរព័ត៌មានបំផ្លើសដែលគ្មានការពិត ឬធ្វើឱ្យប៉ះពាល់ដល់កិត្តិយសរបស់បុគ្គលដទៃដោយគ្មានភស្តុតាង។</span>
+                                <span data-lang="km">សូមកុំប្រើប្រាស់ប្រព័ន្ធនេះដើម្បីផ្សព្វផ្សាយពាក្យចចាមអារ៉ាមគ្មានមូលដ្ឋាន ឬបង្កាច់បង្ខូចមិត្តរួមការងារដោយចេតនា។</span>
                                 <span data-lang="en">Please do not misuse the platform to spread groundless rumors or intentionally defame coworkers without proof.</span>
                             </p>
                         </div>
@@ -445,10 +798,10 @@
                     <div class="checklist-item danger">
                         <i class="fa-solid fa-circle-xmark"></i>
                         <div class="checklist-text">
-                            <h3 data-lang="km">កាត់បន្ថយការប្រើពាក្យសម្តីអសុរោះ</h3>
+                            <h3 data-lang="km">ការប្រើប្រាស់ភាសាមិនសមរម្យ ឬជេរប្រមាថ</h3>
                             <h3 data-lang="en">Inappropriate or Profane Language</h3>
                             <p>
-                                <span data-lang="km">សូមរក្សាការសរសេររាយការណ៍ក្នុងន័យស្ថាបនា ចំបញ្ហា និងប្រើប្រាស់ពាក្យពេចន៍សមរម្យ ដើម្បីងាយស្រួលដល់ក្រុមការងារដោះស្រាយ។</span>
+                                <span data-lang="km">សូមរក្សាការឆ្លើយតបឱ្យមានគោលបំណង និងកសាង។ ប្រើភាសាគួរសម ដើម្បីជួយឱ្យក្រុមការងារវាយតម្លៃ និងដោះស្រាយបញ្ហាប្រកបដោយប្រសិទ្ធភាព។</span>
                                 <span data-lang="en">Keep responses objective and constructive. Use polite language to help the team evaluate and resolve issues effectively.</span>
                             </p>
                         </div>
@@ -458,30 +811,33 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 6 of 11</span>
+            <span>Slide 9 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 7: SYSTEM OPERATIONAL WORKFLOW ===== -->
-    <div class="slide-container lang-km-mode" id="slide7">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 10: SYSTEM OPERATIONAL WORKFLOW                         -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide10">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide10')" id="audio-btn-10">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide7" preload="auto">
-            <source src="audio/slide7.mp3" type="audio/mpeg">
+        <audio id="audio-slide10" preload="auto">
+            <source src="audio/slide10.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide7')" id="audio-btn-7">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">ដំណើរការនិងលំហូរការងាររបស់ប្រព័ន្ធ (System Flow)</span>
+                <span data-lang="km">លំហូរការងារប្រព័ន្ធ (System Flow)</span>
                 <span data-lang="en">System Operational Workflow</span>
             </h2>
             <span class="slide-subtitle">End-to-End Complaint Lifecycle and Backend Automation</span>
@@ -490,36 +846,36 @@
             <div class="horizontal-steps">
                 <div class="step-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(37, 99, 235, 0.08) 100%);">
                     <div class="step-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);"><span data-lang="km">ជំហានទី ១</span><span data-lang="en">Step 1</span></div>
-                    <h3 style="color: #38bdf8;"><i class="fa-brands fa-wpforms"></i> <span data-lang="km">បំពេញទម្រង់ Form</span><span data-lang="en">Form Submission</span></h3>
+                    <h3 style="color: #38bdf8;"><i class="fa-brands fa-wpforms"></i> <span data-lang="km">បញ្ជូនទម្រង់ Form</span><span data-lang="en">Form Submission</span></h3>
                     <p>
-                        <span data-lang="km">ចម្លើយរបស់កម្មកររត់ចូលទៅកាន់ Google Form Database ជាជម្រើសសម្ងាត់ ឬចំហរ។</span>
+                        <span data-lang="km">កម្មករបញ្ជូនទម្រង់ Google Form ប្រកបដោយសុវត្ថិភាព ដោយជ្រើសរើសអត្តសញ្ញាណអនាមិក ឬបង្ហាញឈ្មោះ។</span>
                         <span data-lang="en">Worker submits the Google Form securely with either anonymous or public identity options.</span>
                     </p>
                 </div>
 
                 <div class="step-card" style="border-color: #a855f7; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(168, 85, 247, 0.08) 100%);">
                     <div class="step-badge" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.3);"><span data-lang="km">ជំហានទី ២</span><span data-lang="en">Step 2</span></div>
-                    <h3 style="color: #c084fc;"><i class="fa-solid fa-table"></i> <span data-lang="km">លោតចូល Sheet</span><span data-lang="en">Sheet Sync</span></h3>
+                    <h3 style="color: #c084fc;"><i class="fa-solid fa-table"></i> <span data-lang="km">រួមបញ្ចូល Sheet</span><span data-lang="en">Sheet Sync</span></h3>
                     <p>
-                        <span data-lang="km">ទិន្នន័យសមស្របនឹងត្រូវបញ្ចូលទៅក្នុង Sheet គ្រប់គ្រងអូតូ រួចប្រព័ន្ធចាប់ផ្ដើមគណនាថ្ងៃអូតូ។</span>
+                        <span data-lang="km">ទិន្នន័យត្រូវបានផ្ទេរដោយស្វ័យប្រវត្តិទៅកាន់ Sheet កណ្តាល ដែលចាប់ផ្តើមដំណើរការស្វ័យប្រវត្តិកម្ម។</span>
                         <span data-lang="en">Data maps instantly into the centralized master sheet, initializing automation processes.</span>
                     </p>
                 </div>
 
                 <div class="step-card" style="border-color: #f59e0b; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(245, 158, 11, 0.08) 100%);">
                     <div class="step-badge" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);"><span data-lang="km">ជំហានទី ៣</span><span data-lang="en">Step 3</span></div>
-                    <h3 style="color: #fbbf24;"><i class="fa-solid fa-envelope-open-text"></i> <span data-lang="km">ផ្ញើដំណឹង &amp; ចាត់ការ</span><span data-lang="en">Alert &amp; Action</span></h3>
+                    <h3 style="color: #fbbf24;"><i class="fa-solid fa-envelope-open-text"></i> <span data-lang="km">ផ្ញើជូនដំណឹង &amp; ចាត់ការ</span><span data-lang="en">Alert &amp; Action</span></h3>
                     <p>
-                        <span data-lang="km">ប្រព័ន្ធផ្ញើអ៊ីមែលប្រាប់ក្រុមការងារ CSR។ បណ្តឹងនីមួយៗមានកំណត់ថ្ងៃច្បាស់លាស់ (Deadline Alert)។</span>
+                        <span data-lang="km">ប្រព័ន្ធផ្ញើអ៊ីមែលជូនដំណឹងដល់ក្រុមការងារ CSR។ ប្រព័ន្ធកត់ត្រាថ្ងៃកំណត់សម្រាប់តាមដាន (Deadline Alert)។</span>
                         <span data-lang="en">Email alerts ping the CSR team automatically. System logs operational deadlines for follow-up.</span>
                     </p>
                 </div>
 
                 <div class="step-card" style="border-color: #10b981; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(16, 185, 129, 0.08) 100%);">
                     <div class="step-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);"><span data-lang="km">ជំហានទី ៤</span><span data-lang="en">Step 4</span></div>
-                    <h3 style="color: #34d399;"><i class="fa-solid fa-square-poll-vertical"></i> <span data-lang="km">បិទបណ្តឹង (Done)</span><span data-lang="en">Case Resolved</span></h3>
+                    <h3 style="color: #34d399;"><i class="fa-solid fa-square-poll-vertical"></i> <span data-lang="km">បញ្ចប់បណ្តឹង (Done)</span><span data-lang="en">Case Resolved</span></h3>
                     <p>
-                        <span data-lang="km">ក្រោយពេលពិនិត្យ និងដោះស្រាយរួចរាល់ ស្ថានភាពនឹងត្រូវប្ដូរជាពណ៌បៃតង «Done» ដើម្បីបញ្ចប់ការតាមដាន។</span>
+                        <span data-lang="km">ក្រោយពេលពិនិត្យ និងដោះស្រាយរួច ស្ថានភាពត្រូវបានប្តូរទៅជា "Done" ដោយបញ្ចប់ករណីនេះ។</span>
                         <span data-lang="en">Once reviewed and resolved, status updates to green "Done", successfully archiving the case.</span>
                     </p>
                 </div>
@@ -527,30 +883,33 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 7 of 11</span>
+            <span>Slide 10 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 8: IDENTITY CHANNELS ===== -->
-    <div class="slide-container lang-km-mode" id="slide8">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 11: IDENTITY CHANNELS                                   -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide11">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide11')" id="audio-btn-11">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide8" preload="auto">
-            <source src="audio/slide8.mp3" type="audio/mpeg">
+        <audio id="audio-slide11" preload="auto">
+            <source src="audio/slide11.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide8')" id="audio-btn-8">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">ជម្រើសអត្តសញ្ញាណ៖ «បង្ហាញឈ្មោះ» ឬ «រក្សាសម្ងាត់»</span>
+                <span data-lang="km">ជម្រើសអត្តសញ្ញាណ៖ "បង្ហាញឈ្មោះ" ឬ "រក្សាសម្ងាត់"</span>
                 <span data-lang="en">Identity Channels: "Provide Name" vs "Anonymous"</span>
             </h2>
             <span class="slide-subtitle">Identity Choices and Evaluation Workflow</span>
@@ -560,14 +919,14 @@
                 <div>
                     <h3><i class="fa-solid fa-user-secret" style="color: #94a3b8;"></i> <span data-lang="km">រក្សាសម្ងាត់ (Anonymous)</span><span data-lang="en">Anonymous Path</span></h3>
                     <p>
-                        <span data-lang="km">ប្រព័ន្ធកត់ត្រាប្រភេទបណ្តឹង និងការពិពណ៌នាដោយលាក់ឈ្មោះទាំងស្រុង។ ក្រុមការងារ CSR ចុះអន្តរាគមន៍ និងកែលម្អជាទូទៅក្នុងរោងចក្រ ផ្អែកលើករណីជាក់ស្តែង ដោយមិនមានការទាក់ទងផ្ទាល់ខ្លួនឡើយ។</span>
+                        <span data-lang="km">ប្រព័ន្ធរក្សាតែប្រភេទបណ្តឹង និងការពិពណ៌នាដោយលុបអត្តសញ្ញាណទាំងអស់ចេញ។ ក្រុមការងារ CSR ធ្វើការស៊ើបអង្កេត និងដោះស្រាយដោយផ្អែកលើអង្គហេតុសុទ្ធសាធ។</span>
                         <span data-lang="en">The system stores only the issue description while scrubbing all identity markers. CSR conducts generalized plant investigations and corrective enhancements based on pure facts.</span>
                     </p>
                 </div>
                 <div>
                     <h3><i class="fa-solid fa-user-tag" style="color: #34d399;"></i> <span data-lang="km">បង្ហាញឈ្មោះ (Provide Name)</span><span data-lang="en">Named/Open Path</span></h3>
                     <p>
-                        <span data-lang="km">សមស្របសម្រាប់ករណីផ្ទាល់ខ្លួនដែលទាមទារការជួបជុំដោះស្រាយ ឬផ្ទៀងផ្ទាត់។ ក្រោយពេលដោះស្រាយរួច បុគ្គលិកអាចធ្វើការវាយតម្លៃត្រឡប់ (Evaluation) លើគុណភាព និងល្បឿននៃការឆ្លើយតបរបស់ក្រុមការងារបាន។</span>
+                        <span data-lang="km">សមស្របសម្រាប់បញ្ហាស្មុគស្មាញដែលត្រូវការដំណោះស្រាយត្រឹមត្រូវ ឬការត្រួតពិនិត្យបន្ថែម។ ក្រោយពេលដោះស្រាយរួច បុគ្គលិកអាចវាយតម្លៃការឆ្លើយតប និងគុណភាពនៃដំណោះស្រាយរបស់ក្រុមការងារ។</span>
                         <span data-lang="en">Ideal for complex personal inquiries requiring targeted resolutions or cross-checks. Post-resolution, the employee can evaluate the team's responsiveness and overall resolution quality.</span>
                     </p>
                 </div>
@@ -575,37 +934,40 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 8 of 11</span>
+            <span>Slide 11 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 9: LIVE BACK-END ADMINISTRATION SHEET STRUCTURE ===== -->
-    <div class="slide-container lang-km-mode" id="slide9">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 12: LIVE BACK-END ADMINISTRATION SHEET STRUCTURE        -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide12">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide12')" id="audio-btn-12">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide9" preload="auto">
-            <source src="audio/slide9.mp3" type="audio/mpeg">
+        <audio id="audio-slide12" preload="auto">
+            <source src="audio/slide12.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide9')" id="audio-btn-9">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">រចនាសម្ព័ន្ធតារាងគ្រប់គ្រងជាក់ស្តែងរបស់ប្រព័ន្ធ</span>
+                <span data-lang="km">រចនាសម្ព័ន្ធតារាងគ្រប់គ្រងជាមួយប្រព័ន្ធ</span>
                 <span data-lang="en">Live Back-End Administration Sheet Structure</span>
             </h2>
             <span class="slide-subtitle">Google Sheet Live Integration Layout &amp; Real-time Calculations</span>
         </div>
         <div class="content-area">
             <p style="font-size: 13px; color: #38bdf8; margin-bottom: 12px; font-style: italic;">
-                <span data-lang="km">* ទម្រង់ពិតប្រាកដនៃតារាងទិន្នន័យ (Google Sheet) ដែលចងក្រងចេញពី Form responses សម្រាប់ CSR Team តាមដាន៖</span>
+                <span data-lang="km">* ទម្រង់ពិតប្រាកដនៃតារាង (Google Sheet) ដែលប្រមូលពី Form responses សម្រាប់ CSR Team តាមដាន៖</span>
                 <span data-lang="en">* Actual architecture of the master Google Sheet processed from Form responses for CSR tracking:</span>
             </p>
             <div class="table-layout" style="overflow-x: auto;">
@@ -614,7 +976,7 @@
                         <tr>
                             <th style="font-size: 12px; white-space: nowrap;">Timestamp</th>
                             <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ប្រភេទបណ្តឹង</span><span data-lang="en">Complaint Type</span></th>
-                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ខ្លឹមសារ</span><span data-lang="en">Description</span></th>
+                            <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ការពិពណ៌នា</span><span data-lang="en">Description</span></th>
                             <th style="font-size: 12px; white-space: nowrap;">Identity Choice</th>
                             <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ឈ្មោះ និង លេខកាត</span><span data-lang="en">Name &amp; ID</span></th>
                             <th style="font-size: 12px; white-space: nowrap;"><span data-lang="km">ស្ថានភាព</span><span data-lang="en">Status</span></th>
@@ -651,8 +1013,8 @@
                         </tr>
                         <tr>
                             <td style="font-size: 12px;">25/06/2026</td>
-                            <td style="font-size: 12px;"><span data-lang="km">ការណែនាំ ឬយោបល់កែលម្អ</span><span data-lang="en">Recommendations</span></td>
-                            <td style="font-size: 12px;"><span data-lang="km">ស្នើដំឡើងកង្ហារបន្ថែមក្នុងសិក្ខាសាលា</span><span data-lang="en">Suggest installing more fans in the workshop</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">ការផ្តល់យោបល់ ឬយោបល់កែលម្អ</span><span data-lang="en">Recommendations</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">ស្នើសុំដំឡើងកង្ហារបន្ថែមក្នុងសិក្ខាសាលា</span><span data-lang="en">Suggest installing more fans in the workshop</span></td>
                             <td style="font-size: 12px;"><span data-lang="km">បង្ហាញឈ្មោះ</span><span data-lang="en">Provide Name</span></td>
                             <td style="font-size: 12px;">Rithy / 1040</td>
                             <td><span class="state-badge state-done" style="font-size: 11px;">Done</span></td>
@@ -661,7 +1023,7 @@
                         <tr>
                             <td style="font-size: 12px;">30/06/2026</td>
                             <td style="font-size: 12px;"><span data-lang="km">ផ្សេងៗ</span><span data-lang="en">Other</span></td>
-                            <td style="font-size: 12px;"><span data-lang="km">សួរអំពីនីតិវិធីសុំឈប់សម្រាកបន្ទាន់</span><span data-lang="en">Ask about emergency leave procedure</span></td>
+                            <td style="font-size: 12px;"><span data-lang="km">សួរអំពីនីតិវិធីឈប់សម្រាកបន្ទាន់</span><span data-lang="en">Ask about emergency leave procedure</span></td>
                             <td style="font-size: 12px;"><span data-lang="km">រក្សាសម្ងាត់</span><span data-lang="en">Anonymous</span></td>
                             <td style="font-size: 12px;">-</td>
                             <td><span class="state-badge state-pending" style="font-size: 11px;">Pending</span></td>
@@ -673,32 +1035,35 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 9 of 11</span>
+            <span>Slide 12 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 10: KEY STRATEGIC BENEFITS ===== -->
-    <div class="slide-container lang-km-mode" id="slide10">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+    <!-- ============================================================ -->
+    <!-- SLIDE 13: KEY STRATEGIC BENEFITS                              -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide13">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide13')" id="audio-btn-13">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
         </div>
         
-        <audio id="audio-slide10" preload="auto">
-            <source src="audio/slide10.mp3" type="audio/mpeg">
+        <audio id="audio-slide13" preload="auto">
+            <source src="audio/slide13.mp3" type="audio/mpeg">
         </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide10')" id="audio-btn-10">
-            <i class="fa-solid fa-volume-high"></i> 
-            <span data-lang="km">ស្តាប់</span>
-            <span data-lang="en">Listen</span>
-        </button>
 
         <div style="position: absolute; bottom: -50px; left: 20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
 
         <div class="slide-title-wrapper">
             <h2 class="slide-title">
-                <span data-lang="km">អត្ថប្រយោជន៍គន្លឹះនៃប្រព័ន្ធឌីជីថល</span>
+                <span data-lang="km">អត្ថប្រយោជន៍ដ៏សំខាន់នៃប្រព័ន្ធឌីជីថល</span>
                 <span data-lang="en">Key Strategic Benefits of the Digital Platform</span>
             </h2>
             <span class="slide-subtitle">Value-Added Benefits for Employees and Management</span>
@@ -710,9 +1075,9 @@
                     <div class="pillar-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.25); box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
-                    <h3 style="color: #fbbf24;"><span data-lang="km">លឿនរហ័ស និងស្វ័យប្រវត្តិ</span><span data-lang="en">Speed &amp; Automation</span></h3>
+                    <h3 style="color: #fbbf24;"><span data-lang="km">លឿន និងស្វ័យប្រវត្តិ</span><span data-lang="en">Speed &amp; Automation</span></h3>
                     <p>
-                        <span data-lang="km">មិនបាច់ចំណាយពេលសរសេរលើក្រដាស និងដើរទៅប្រអប់បណ្តឹង។ ទិន្នន័យរត់ភ្លាមៗ ជួយឱ្យការសម្រេចចិត្តដោះស្រាយធ្វើឡើងបានលឿនជាងមុន។</span>
+                        <span data-lang="km">មិនបាច់ចំណាយពេលវេលាច្រើនលើក្រដាស ឬដើរទៅប្រអប់ដាក់ពាក្យបណ្តឹង។ ទិន្នន័យត្រូវបានបញ្ជូនតាមពេលវេលាជាក់ស្តែង ដើម្បីធានាការដោះស្រាយបញ្ហាបានលឿនជាងមុន។</span>
                         <span data-lang="en">Saves time by removing manual paperwork or walking to physical boxes. Live data piping ensures accelerated resolution turnarounds.</span>
                     </p>
                 </div>
@@ -721,9 +1086,9 @@
                     <div class="pillar-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.25); box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);">
                         <i class="fa-solid fa-chart-pie"></i>
                     </div>
-                    <h3 style="color: #34d399;"><span data-lang="km">ងាយស្រួលធ្វើរបាយការណ៍</span><span data-lang="en">Effortless Reporting</span></h3>
+                    <h3 style="color: #34d399;"><span data-lang="km">ងាយស្រួលរាយការណ៍</span><span data-lang="en">Effortless Reporting</span></h3>
                     <p>
-                        <span data-lang="km">ប្រព័ន្ធបម្លែងទិន្នន័យជាក្រាបតារាង (Pie Chart) អូតូ ងាយស្រួលដឹងថាក្នុងមួយខែៗមានបញ្ហាត្រង់ណាខ្លះកើតឡើងច្រើនជាងគេ ដើម្បីកែលម្អចំគោលដៅ។</span>
+                        <span data-lang="km">ប្រព័ន្ធបំប្លែងទិន្នន័យប្រចាំខែទៅជាក្រាហ្វិក (Pie Chart) ដោយស្វ័យប្រវត្តិ ដែលជួយកំណត់បញ្ហាដែលកើតឡើងញឹកញាប់សម្រាប់ការកែលម្អរោងចក្រ។</span>
                         <span data-lang="en">Converts monthly raw submissions into automated pie charts instantly, identifying high-frequency issues for targeted plant improvements.</span>
                     </p>
                 </div>
@@ -732,9 +1097,9 @@
                     <div class="pillar-icon" style="color: #f43f5e; background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.25); box-shadow: 0 0 20px rgba(244, 63, 94, 0.15);">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-                    <h3 style="color: #fb7185;"><span data-lang="km">បង្កើនភាពជឿជាក់ផ្ទៃក្នុង</span><span data-lang="en">Internal Workplace Trust</span></h3>
+                    <h3 style="color: #fb7185;"><span data-lang="km">បង្កើនភាពជឿជាក់ក្នុងកន្លែងធ្វើការ</span><span data-lang="en">Internal Workplace Trust</span></h3>
                     <p>
-                        <span data-lang="km">ការមានប្រព័ន្ធតាមដានថ្ងៃច្បាស់លាស់ ជួយធានាតម្លាភាព និងបង្កើនភាពកក់ក្តៅជូនដល់កម្មករនិយោជិតគ្រប់រូបនៅក្នុងរោងចក្រ។</span>
+                        <span data-lang="km">ការមានតម្លាភាពក្នុងការកំណត់ថ្ងៃផុតកំណត់ ជួយបង្កើនទំនុកចិត្តដល់កម្មករ និងធានាថាបុគ្គលិកទាំងអស់ទទួលបានការប្រព្រឹត្តិដោយយុត្តិធម៌។</span>
                         <span data-lang="en">Operational deadline transparency actively builds strong workforce morale and reassures all factory personnel of fair treatment.</span>
                     </p>
                 </div>
@@ -743,26 +1108,369 @@
 
         <div class="slide-footer">
             <span>CSR &amp; IT Operations System Presentation</span>
-            <span>Slide 10 of 11</span>
+            <span>Slide 13 of 16</span>
         </div>
     </div>
 
-    <!-- ===== SLIDE 11: FINAL / QR CODE ===== -->
-    <div class="slide-container lang-km-mode" id="slide11">
-        <div class="lang-switcher">
-            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
-            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
-        </div>
-        
-        <audio id="audio-slide11" preload="auto">
-            <source src="audio/slide11.mp3" type="audio/mpeg">
-        </audio>
-        
-        <button class="audio-btn" onclick="speakSlide('slide11')" id="audio-btn-11">
+    <!-- ============================================================ -->
+<!-- SLIDE 14: RESOLUTION TIMELINES BY CATEGORY                     -->
+<!-- ============================================================ -->
+<div class="slide-container lang-km-mode" id="slide14">
+    <div class="top-controls">
+        <button class="audio-btn" onclick="speakSlide('slide14')" id="audio-btn-14">
             <i class="fa-solid fa-volume-high"></i> 
             <span data-lang="km">ស្តាប់</span>
             <span data-lang="en">Listen</span>
         </button>
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+    </div>
+    
+    <audio id="audio-slide14" preload="auto">
+        <source src="audio/slide14.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="slide-title-wrapper">
+        <h2 class="slide-title">
+            <span data-lang="km">ពេលវេលាកំណត់សម្រាប់ដោះស្រាយបណ្តឹងតាមប្រភេទ</span>
+            <span data-lang="en">Resolution Timelines by Category</span>
+        </h2>
+        <span class="slide-subtitle">
+            <span data-lang="km">ការសន្យាទូទៅ៖ យើងពិនិត្យរាល់ការដាក់ពាក្យក្នុងរយៈពេល ២៤ ម៉ោង</span>
+            <span data-lang="en">General Promise: We review every submission within 24 hours</span>
+        </span>
+    </div>
+
+    <div class="content-area">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+            
+            <!-- Rights & Benefits -->
+            <div class="pillar-card" style="border-color: #2563eb; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(37, 99, 235, 0.05) 100%); text-align: left; padding: 20px 18px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(37, 99, 235, 0.2); display: flex; align-items: center; justify-content: center; color: #38bdf8; font-size: 18px;">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #38bdf8; font-size: 15px; margin: 0;">Rights &amp; Benefits</h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ 3 - 5 Days</span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km">បញ្ហាភាគច្រើនទាក់ទងនឹងការត្រួតពិនិត្យកំណត់ត្រា HR, កំណត់ត្រាវត្តមាន ឬការគណនាប្រាក់ឈ្នួល ដែលអាចដោះស្រាយបានក្នុងរយៈពេលពីរបីថ្ងៃ។</span>
+                    <span data-lang="en">Most issues involve cross-checking HR records, attendance logs, or payroll calculations, which can be resolved within a few days.</span>
+                </p>
+            </div>
+
+            <!-- Health & Safety -->
+            <div class="pillar-card" style="border-color: #10b981; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(16, 185, 129, 0.05) 100%); text-align: left; padding: 20px 18px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(16, 185, 129, 0.2); display: flex; align-items: center; justify-content: center; color: #34d399; font-size: 18px;">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #34d399; font-size: 15px; margin: 0;">Health &amp; Safety</h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ 1 - 3 Days</span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km">គ្រោះថ្នាក់រាងកាយ ឬហានិភ័យសុវត្ថិភាពត្រូវការការត្រួតពិនិត្យ និងថែទាំជាបន្ទាន់។ ប្រសិនបើមានគ្រោះថ្នាក់ដល់អាយុជីវិត សកម្មភាពនឹងត្រូវធ្វើភ្លាមៗ។</span>
+                    <span data-lang="en">Physical hazards or safety risks require urgent inspection and maintenance. If there is immediate danger to life, action is taken instantly.</span>
+                </p>
+            </div>
+
+            <!-- Legal Requirements -->
+            <div class="pillar-card" style="border-color: #f59e0b; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(245, 158, 11, 0.05) 100%); text-align: left; padding: 20px 18px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(245, 158, 11, 0.2); display: flex; align-items: center; justify-content: center; color: #fbbf24; font-size: 18px;">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #fbbf24; font-size: 15px; margin: 0;">Legal Requirements</h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ 5 - 7 Days</span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km">បញ្ហាច្បាប់ (ដូចជាជម្លោះកិច្ចសន្យា ឬការគណនាសំណងស្មុគស្មាញ) អាចត្រូវការការស៊ើបអង្កេតស៊ីជម្រៅ ការពិគ្រោះយោបល់ជាមួយមេធាវីរោងចក្រ ឬការសម្របសម្រួលជាមួយថ្នាក់គ្រប់គ្រង។</span>
+                    <span data-lang="en">Legal issues may require deeper investigation, consultation with factory lawyers, or coordination with factory management.</span>
+                </p>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="pillar-card" style="border-color: #a855f7; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(168, 85, 247, 0.05) 100%); text-align: left; padding: 20px 18px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(168, 85, 247, 0.2); display: flex; align-items: center; justify-content: center; color: #c084fc; font-size: 18px;">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #c084fc; font-size: 15px; margin: 0;">Recommendations</h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ 7 - 10 Days</span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km">គំនិតកែលម្អត្រូវការការពិនិត្យដោយថ្នាក់គ្រប់គ្រងអំពីថវិកា លទ្ធភាព និងការធ្វើផែនការ។ យើងនឹងផ្តល់ការឆ្លើយតបជាផ្លូវការថាតើគំនិតនោះអាចអនុវត្តបានឬទេ។</span>
+                    <span data-lang="en">Ideas for improvements need to be reviewed by management for budget, feasibility, and planning. We will provide an official response on whether the idea can be implemented.</span>
+                </p>
+            </div>
+
+            <!-- Other -->
+            <div class="pillar-card" style="border-color: #ef4444; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(239, 68, 68, 0.05) 100%); text-align: left; padding: 20px 18px; grid-column: span 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(239, 68, 68, 0.2); display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 18px;">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #f87171; font-size: 15px; margin: 0;"><span data-lang="km">ផ្សេងៗ (ទូទៅ)</span><span data-lang="en">Other (Standard)</span></h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ 5 Days</span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km">បញ្ហារដ្ឋបាលទូទៅ ឬបញ្ហារវាងបុគ្គលិក ដែលមិនស្ថិតក្នុងប្រភេទខាងលើ។</span>
+                    <span data-lang="en">Standard administrative or interpersonal issues not covered in the categories above.</span>
+                </p>
+            </div>
+
+            <!-- CRITICAL: Harassment & Abuse -->
+            <div class="pillar-card" style="border-color: #dc2626; background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(220, 38, 38, 0.08) 100%); text-align: left; padding: 20px 18px; grid-column: span 2; border-width: 2px; border-style: solid;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(220, 38, 38, 0.3); display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 18px; animation: pulse 1.5s infinite;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #f87171; font-size: 15px; margin: 0;">🚨 <span data-lang="km">ការយាយី និងការរំលោភបំពាន</span><span data-lang="en">Harassment &amp; Abuse</span></h4>
+                        <span style="color: #fbbf24; font-size: 13px; font-weight: 700;">⏱️ <span data-lang="km">ចាប់ផ្តើមស៊ើបអង្កេតក្នុង ២៤ ម៉ោង | ដំណោះស្រាយបឋម ៣-៥ ថ្ងៃ</span><span data-lang="en">Investigation starts within 24 hrs | Initial Resolution 3-5 Days</span></span>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #94a3b8; margin: 0; line-height: 1.5;">
+                    <span data-lang="km"><strong style="color: #f87171;">គោលការណ៍មិនអត់ឱន៖</strong> តម្រូវឱ្យមានការបំបែកភាគីភ្លាមៗ ការការពារផ្តោតលើជនរងគ្រោះ និងវិន័យរហ័សប្រសិនបើមានការផ្ទៀងផ្ទាត់។</span>
+                    <span data-lang="en"><strong style="color: #f87171;">Zero Tolerance:</strong> Requires immediate separation of parties, victim-centric protection, and rapid disciplinary action if verified.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span>Digital Complaint System Deck</span>
+        <span>Slide 14 of 16</span>
+    </div>
+</div>
+
+    <!-- ============================================================ -->
+<!-- SLIDE 15: RESOLUTION WORKFLOWS                                 -->
+<!-- ============================================================ -->
+<div class="slide-container lang-km-mode" id="slide15">
+    <div class="top-controls">
+        <button class="audio-btn" onclick="speakSlide('slide15')" id="audio-btn-15">
+            <i class="fa-solid fa-volume-high"></i> 
+            <span data-lang="km">ស្តាប់</span>
+            <span data-lang="en">Listen</span>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+            <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+        </div>
+    </div>
+    
+    <audio id="audio-slide15" preload="auto">
+        <source src="audio/slide15.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="slide-title-wrapper">
+        <h2 class="slide-title">
+            <span data-lang="km">ដំណើរការដោះស្រាយបណ្តឹង</span>
+            <span data-lang="en">Resolution Workflows</span>
+        </h2>
+        <span class="slide-subtitle">
+            <span data-lang="km">ដំណើរការស្តង់ដារ vs ដំណើរការរសើប (ការយាយី និងការរំលោភបំពាន)</span>
+            <span data-lang="en">Standard Process vs Sensitive Process (Harassment &amp; Abuse)</span>
+        </span>
+    </div>
+
+    <div class="content-area">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; height: 100%;">
+            
+            <!-- WORKFLOW A: STANDARD PROCESS -->
+            <div style="background: rgba(30, 41, 59, 0.4); border-radius: 16px; border: 1px solid rgba(56, 189, 248, 0.15); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto;">
+                <div style="display: flex; align-items: center; gap: 12px; border-bottom: 2px solid rgba(56, 189, 248, 0.15); padding-bottom: 12px;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; color: #38bdf8; font-size: 16px;">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #38bdf8; font-size: 17px; margin: 0;">Workflow A</h3>
+                        <p style="color: #94a3b8; font-size: 12px; margin: 0;"><span data-lang="km">ដំណើរការស្តង់ដារ</span><span data-lang="en">Standard Process</span></p>
+                    </div>
+                    <span style="margin-left: auto; background: rgba(56, 189, 248, 0.1); color: #38bdf8; font-size: 10px; padding: 2px 12px; border-radius: 20px; font-weight: 600;">Rights, OSH, Legal, Recommendations, Other</span>
+                </div>
+                
+                <!-- Step 1 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                    <span style="background: linear-gradient(135deg, #2563eb, #38bdf8); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">1</span>
+                    <div>
+                        <h4 style="color: #ffffff; font-size: 13px; margin: 0;"><span data-lang="km">ទទួល និងពិនិត្យ</span><span data-lang="en">Receipt &amp; Review</span></h4>
+                        <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.4;">
+                            <span data-lang="km">ក្នុងរយៈពេល ២៤ ម៉ោង។ ក្រុមការងារ CSR ទទួល ពិនិត្យ និងបញ្ជូនទៅកាន់នាយកដ្ឋានត្រឹមត្រូវ (HR, Maintenance, Production)។</span>
+                            <span data-lang="en">Within 24 Hours. CSR team receives, reviews, and assigns to correct department (HR, Maintenance, Production).</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                    <span style="background: linear-gradient(135deg, #2563eb, #38bdf8); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">2</span>
+                    <div>
+                        <h4 style="color: #ffffff; font-size: 13px; margin: 0;"><span data-lang="km">ស៊ើបអង្កេត និងប្រមូលភស្តុតាង</span><span data-lang="en">Investigation &amp; Fact-Finding</span></h4>
+                        <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.4;">
+                            <span data-lang="km">រយៈពេល ១-៣ ថ្ងៃ។ ពិនិត្យទិន្នន័យប្រាក់ឈ្នួល ត្រួតពិនិត្យម៉ាស៊ីន ឬផ្ទៀងផ្ទាត់អនុលោមតាមច្បាប់ការងារ។</span>
+                            <span data-lang="en">1-3 Days. Check payroll data, inspect machinery, or verify Labor Law compliance.</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                    <span style="background: linear-gradient(135deg, #2563eb, #38bdf8); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">3</span>
+                    <div>
+                        <h4 style="color: #ffffff; font-size: 13px; margin: 0;"><span data-lang="km">ផែនការសកម្មភាព និងកែតម្រូវ</span><span data-lang="en">Action Plan &amp; Correction</span></h4>
+                        <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.4;">
+                            <span data-lang="km">រយៈពេល ១-២ ថ្ងៃ។ ថ្នាក់គ្រប់គ្រងអនុម័តដំណោះស្រាយ៖ កែប្រាក់ឈ្នួល ជំនួសឧបករណ៍សុវត្ថិភាព ឬកំណត់កាលវិភាគជួសជុល។</span>
+                            <span data-lang="en">1-2 Days. Management approves solution: correct salary, replace safety gear, or schedule repair.</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start; padding: 8px 0;">
+                    <span style="background: linear-gradient(135deg, #10b981, #34d399); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">4</span>
+                    <div>
+                        <h4 style="color: #ffffff; font-size: 13px; margin: 0;"><span data-lang="km">មតិកែលម្អ និងបិទករណី</span><span data-lang="en">Feedback &amp; Closure</span></h4>
+                        <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.4;">
+                            <span data-lang="km">ថ្ងៃចុងក្រោយ។ យើងជូនដំណឹងតាមរយៈវេទិកាអំពីលទ្ធផល។ នៅពេលអ្នកបញ្ជាក់ថាដំណោះស្រាយត្រូវបានអនុវត្ត បណ្តឹងត្រូវបានបិទជាផ្លូវការ។</span>
+                            <span data-lang="en">Final Day. We notify you via platform of the outcome. Once you confirm the solution is applied, the grievance is officially closed.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORKFLOW B: SENSITIVE PROCESS -->
+<div style="background: rgba(30, 41, 59, 0.4); border-radius: 16px; border: 2px solid rgba(220, 38, 38, 0.2); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; position: relative;">
+    
+    <div style="position: absolute; top: -10px; right: 20px; background: #dc2626; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">🔒 សម្ងាត់</div>
+    
+    <div style="display: flex; align-items: center; gap: 12px; border-bottom: 2px solid rgba(220, 38, 38, 0.2); padding-bottom: 12px;">
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(220, 38, 38, 0.15); display: flex; align-items: center; justify-content: center; color: #f87171; font-size: 16px;">
+            <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <div>
+            <h3 style="color: #f87171; font-size: 17px; margin: 0;">Workflow B</h3>
+            <p style="color: #94a3b8; font-size: 12px; margin: 0;">
+                <span data-lang="km">ដំណើរការរសើប</span>
+                <span data-lang="en">Sensitive Process</span>
+            </p>
+        </div>
+        <span style="margin-left: auto; background: rgba(220, 38, 38, 0.15); color: #f87171; font-size: 10px; padding: 2px 12px; border-radius: 20px; font-weight: 600;">Harassment &amp; Abuse</span>
+    </div>
+
+    <!-- ប្រអប់ព្រមានការពារសម្ងាត់ -->
+    <div style="background: rgba(220, 38, 38, 0.05); border-radius: 8px; padding: 10px 14px; margin-bottom: 6px; border-left: 3px solid #dc2626;">
+        <p style="color: #f87171; font-size: 12px; margin: 0; line-height: 1.5;">
+            <i class="fa-solid fa-shield-halved" style="margin-right: 6px;"></i>
+            <span data-lang="km"><strong>ការការពារដាច់ខាត៖</strong> ដំណើរការនេះឆ្លងកាត់បុគ្គលិកធម្មតា ហើយទៅដល់គណៈកម្មការឯកទេសសម្ងាត់ដោយផ្ទាល់។ អត្តសញ្ញាណរបស់អ្នកត្រូវបានការពារទាំងស្រុង។</span>
+            <span data-lang="en"><strong>Absolute Protection:</strong> This workflow bypasses regular staff and goes directly to a specialized, confidential committee. Your identity is fully protected.</span>
+        </p>
+    </div>
+    
+    <!-- ជំហានទី 1 -->
+    <div style="display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+        <span style="background: #dc2626; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">1</span>
+        <div>
+            <h4 style="color: #ffffff; font-size: 13px; margin: 0;">
+                <span data-lang="km">ការការពារភ្លាមៗ និងការវាយតម្លៃ</span>
+                <span data-lang="en">Immediate Protection &amp; Triage</span>
+            </h4>
+            <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.5;">
+                <span data-lang="km">ក្នុងរយៈពេល ២៤ ម៉ោង។ របាយការណ៍ទៅកាន់ប្រធាន CSR/HR ភ្លាមៗ។ អាទិភាពទីមួយគឺសុវត្ថិភាពកម្មករ។</span>
+                <span data-lang="en">Within 24 Hours. Report goes directly to Head of CSR/HR. First priority is worker safety.</span>
+            </p>
+        </div>
+    </div>
+    
+    <!-- ជំហានទី 2 -->
+    <div style="display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+        <span style="background: #dc2626; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">2</span>
+        <div>
+            <h4 style="color: #ffffff; font-size: 13px; margin: 0;">
+                <span data-lang="km">ការស៊ើបអង្កេតសម្ងាត់</span>
+                <span data-lang="en">Confidential Investigation</span>
+            </h4>
+            <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.5;">
+                <span data-lang="km">រយៈពេល ១-៣ ថ្ងៃ។ ធ្វើការសម្ភាសន៍ដោយសម្ងាត់ក្នុងបន្ទប់បិទជិត ដើម្បីការពារឯកជនភាព។ ប្រមូលភស្តុតាងដោយមិនបង្ហាញអ្នករាយការណ៍។</span>
+                <span data-lang="en">1-3 Days. Private investigation with discreet interviews in a closed room. Evidence gathered without exposing reporter.</span>
+            </p>
+        </div>
+    </div>
+    
+    <!-- ជំហានទី 3 -->
+    <div style="display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+        <span style="background: #dc2626; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">3</span>
+        <div>
+            <h4 style="color: #ffffff; font-size: 13px; margin: 0;">
+                <span data-lang="km">វិន័យ និងដំណោះស្រាយ</span>
+                <span data-lang="en">Disciplinary Action &amp; Remedy</span>
+            </h4>
+            <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.5;">
+                <span data-lang="km">ក្នុងរយៈពេល ៤៨ ម៉ោងបន្ទាប់ពីរកឃើញ។ ចាត់វិន័យតាមបទបញ្ជាផ្ទៃក្នុង និងច្បាប់ការងារកម្ពុជា (ពីការព្រមានចុងក្រោយ រហូតដល់ការបណ្តេញចេញភ្លាមៗ)។</span>
+                <span data-lang="en">Within 48 hours of finding. Strict disciplinary action in accordance with internal regulations and Cambodian Labor Law (ranging from final warnings to immediate termination).</span>
+            </p>
+        </div>
+    </div>
+    
+    <!-- ជំហានទី 4 -->
+    <div style="display: flex; gap: 12px; align-items: flex-start; padding: 6px 0;">
+        <span style="background: #10b981; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;">4</span>
+        <div>
+            <h4 style="color: #ffffff; font-size: 13px; margin: 0;">
+                <span data-lang="km">តាមដានបន្ត</span>
+                <span data-lang="en">Secure Follow-Up</span>
+            </h4>
+            <p style="color: #94a3b8; font-size: 11.5px; margin: 2px 0 0 0; line-height: 1.5;">
+                <span data-lang="km">បន្ត។ ក្រុមការងារ CSR ផ្តល់ការអាប់ដេតប្រកបដោយសុវត្ថិភាពដល់ជនរងគ្រោះ។ យើងនឹងត្រួតពិនិត្យជាមួយកម្មករក្នុងសប្តាហ៍បន្ទាប់ ដើម្បីធានាថាពួកគេមានសុវត្ថិភាព និងគ្មានការសងសឹក។</span>
+                <span data-lang="en">Continuous. CSR team provides secure update to victim. We will check back over following weeks to ensure they feel safe and face absolutely no retaliation.</span>
+            </p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span>Digital Complaint System Deck</span>
+        <span>Slide 15 of 16</span>
+    </div>
+</div>
+
+
+
+
+    <!-- ============================================================ -->
+    <!-- SLIDE 16: FINAL / QR CODE                                     -->
+    <!-- ============================================================ -->
+    <div class="slide-container lang-km-mode" id="slide16">
+        <div class="top-controls">
+            <button class="audio-btn" onclick="speakSlide('slide16')" id="audio-btn-16">
+                <i class="fa-solid fa-volume-high"></i> 
+                <span data-lang="km">ស្តាប់</span>
+                <span data-lang="en">Listen</span>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn km-btn active" onclick="switchLang('km')">KH</button>
+                <button class="lang-btn en-btn" onclick="switchLang('en')">EN</button>
+            </div>
+        </div>
+        
+        <audio id="audio-slide16" preload="auto">
+            <source src="audio/slide16.mp3" type="audio/mpeg">
+        </audio>
 
         <div class="slide-title-wrapper" style="text-align: center; border-left: none; padding-left: 0;">
             <h2 style="font-size: 38px; color: #ffffff;">
@@ -776,7 +1484,7 @@
                 <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 16px; border: 2px dashed rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 310px; overflow: hidden;">
                     <img src="https://res.cloudinary.com/dfgegfg9c/image/upload/v1783142845/ukbrfirklwjwxvvmiiau.png" alt="System QR Code" style="width: 220px; height: 220px; object-fit: contain; background-color: #ffffff; padding: 6px; border-radius: 8px; border: 3px solid #2563eb;">
                     <span style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-top: 15px; letter-spacing: 0.5px;">
-                        <span data-lang="km">ស្កែនដើម្បីបញ្ចេញមតិ</span>
+                        <span data-lang="km">ស្កេនដើម្បីបញ្ចេញមតិ</span>
                         <span data-lang="en">SCAN TO REPORT</span>
                     </span>
                 </div>
@@ -790,10 +1498,10 @@
                     <div class="checklist-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <div class="checklist-text">
-                            <h3 data-lang="km">ស្កែន QR Code ដើម្បីបើកទម្រង់ Form ភ្លាមៗ</h3>
+                            <h3 data-lang="km">ស្កេន QR Code ដើម្បីបើកទម្រង់ Form ភ្លាមៗ</h3>
                             <h3 data-lang="en">Instant QR Code Access</h3>
                             <p>
-                                <span data-lang="km">បងប្អូនអាចប្រើប្រាស់កាមេរ៉ាទូរស័ព្ទ ឬកម្មវិធីស្កែនផ្សេងៗដើម្បីបើកបំពេញទម្រង់អនឡាញបានគ្រប់ពេល។</span>
+                                <span data-lang="km">បុគ្គលិកអាចប្រើប្រាស់កាមេរ៉ាទូរស័ព្ទធម្មតាដើម្បីស្កេន និងបើកទម្រង់អនឡាញបានគ្រប់ពេលវេលា។</span>
                                 <span data-lang="en">Workers can quickly utilize any standard phone camera to load and fill out the form at any moment.</span>
                             </p>
                         </div>
@@ -801,10 +1509,10 @@
                     <div class="checklist-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <div class="checklist-text">
-                            <h3 data-lang="km">ការរក្សាទុកទិន្នន័យប្រកបដោយសុវត្ថិភាពខ្ពស់</h3>
+                            <h3 data-lang="km">ការរក្សាទុកទិន្នន័យប្រកបដោយសុវត្ថិភាព</h3>
                             <h3 data-lang="en">Secure and Hardened Data Storage</h3>
                             <p>
-                                <span data-lang="km">ធានាភាពសម្ងាត់ជូនបងប្អូនកម្មករនិយោជិត និងរក្សាទុកក្នុងប្រព័ន្ធទិន្នន័យសុវត្ថិភាពរបស់រោងចក្រ។</span>
+                                <span data-lang="km">ធានាភាពសម្ងាត់ជូនអ្នកប្រើប្រាស់ និងការរក្សាទុកទិន្នន័យប្រកបដោយសុវត្ថិភាពនៅក្នុងរោងចក្រ។</span>
                                 <span data-lang="en">Guarantees strict end-user confidentiality, backed by protected enterprise factory data storage.</span>
                             </p>
                         </div>
@@ -814,11 +1522,13 @@
         </div>
         <div class="slide-footer">
             <span>Digital Complaint System Deck</span>
-            <span>Slide 11 of 11</span>
+            <span>Slide 16 of 16</span>
         </div>
     </div>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ============================================================ -->
+    <!-- JAVASCRIPT                                                     -->
+    <!-- ============================================================ -->
     <script src="js/script.js"></script>
 </body>
 </html>
